@@ -128,9 +128,9 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-o
 .rid{display:inline-block;font-size:24px;font-weight:800;letter-spacing:1px;background:var(--soft);border-radius:10px;padding:6px 16px;margin:8px 0}
 .setup{background:var(--draftbg);color:var(--draft);border-radius:12px;padding:10px 14px;font-size:14.5px;margin-bottom:14px}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
-.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;position:relative;z-index:1}
-@media (max-width:900px){.heroGrid{grid-template-columns:1fr}.heroArt{max-width:420px}}
-.heroArt svg{width:100%;height:auto;display:block}
+.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;position:relative;z-index:1}
+@media (max-width:900px){.heroGrid{grid-template-columns:1fr}.heroArt{max-width:560px}}
+.heroArt img{width:100%;height:auto;display:block}
 .ico{width:44px;height:44px;border-radius:12px;background:var(--card);display:grid;place-items:center;margin-bottom:10px;color:var(--brand)}
 .ico svg{width:26px;height:26px}
 .statsWrap{display:grid;grid-template-columns:1fr;gap:18px;justify-items:start}
@@ -188,39 +188,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <a class="btn" href="#register">Register now →</a><a class="btn alt" href="#agenda">View agenda</a>
       <div class="count" id="countdown"></div>
     </div><div class="heroArt" aria-hidden="true">
-<svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="210" cy="170" r="150" fill="rgba(14,106,90,.06)"/>
-  <circle cx="210" cy="170" r="110" fill="rgba(14,106,90,.06)"/>
-  <!-- ground -->
-  <rect x="40" y="268" width="340" height="10" rx="5" fill="rgba(14,106,90,.18)"/>
-  <!-- trees -->
-  <rect x="62" y="210" width="8" height="60" rx="3" fill="#6b4d2e"/><circle cx="66" cy="200" r="30" fill="#2fa37f"/><circle cx="52" cy="214" r="18" fill="#27926f"/>
-  <rect x="352" y="222" width="7" height="48" rx="3" fill="#6b4d2e"/><circle cx="355" cy="212" r="24" fill="#2fa37f"/>
-  <!-- toilet block -->
-  <rect x="110" y="140" width="200" height="130" rx="8" fill="#ffffff" stroke="#cfe0d8" stroke-width="2"/>
-  <path d="M98 146 L210 92 L322 146 Z" fill="#e5a13a"/>
-  <rect x="98" y="140" width="224" height="12" rx="4" fill="#c9852a"/>
-  <!-- solar panel -->
-  <g transform="translate(232 104) rotate(-25)"><rect width="46" height="20" rx="2" fill="#1f3b5c"/><path d="M15 0v20M31 0v20M0 10h46" stroke="#5c87b8" stroke-width="1.5"/></g>
-  <!-- doors -->
-  <rect x="128" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
-  <rect x="188" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
-  <rect x="248" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
-  <circle cx="165" cy="226" r="3" fill="#e5a13a"/><circle cx="225" cy="226" r="3" fill="#e5a13a"/><circle cx="285" cy="226" r="3" fill="#e5a13a"/>
-  <!-- pictograms: woman, man, accessible -->
-  <g fill="#0e6a5a">
-    <circle cx="150" cy="160" r="5"/><path d="M144 168h12l4 14h-20z"/>
-    <circle cx="210" cy="160" r="5"/><rect x="204" y="167" width="12" height="15" rx="3"/>
-    <circle cx="268" cy="159" r="4.5"/><path d="M266 166h4v8h7l3 8h-4l-2-5h-8z"/><circle cx="268" cy="180" r="6" fill="none" stroke="#0e6a5a" stroke-width="2.5"/>
-  </g>
-  <!-- water tank + drop -->
-  <rect x="140" y="112" width="36" height="22" rx="4" fill="#cfe7f5"/><rect x="146" y="106" width="24" height="8" rx="3" fill="#9dc9e3"/>
-  <!-- sparkles -->
-  <g fill="#e5a13a" opacity=".8"><path d="M60 110l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M370 120l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><path d="M330 60l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
-  <!-- water drop with check -->
-  <path d="M355 290c0-14 18-34 18-34s18 20 18 34a18 18 0 0 1-36 0z" fill="#5fb8e8" transform="translate(-20 -170)"/>
-  <path d="M341 122l6 6 11-12" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div>
+<img src="logos/hero.png" alt="Public toilet, faecal sludge treatment plant, desludging vehicle and a sanitation worker"></div>
     </div>
   </div>
 
