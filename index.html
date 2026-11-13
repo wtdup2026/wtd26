@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Toilet Day 2026 — Uttar Pradesh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* ================= EDIT HERE ================= */
+// 1) Google Apps Script Web App URL (see SETUP.txt)
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzi8c_kjtNn_q5FlWA56CuAwoyFay91UrTDBlISgupxG0MEkMhqAWzOCuWrwfsxGwAJ/exec";
+// 2) Messages: set approved:true only after the office concerned has approved the text
+const MESSAGES = [
+  { role:"Hon'ble Minister", dept:"Urban Development Department, Government of Uttar Pradesh", photo:"logos/minister.jpg", name:"", approved:false,
+    text:"Safe sanitation is the foundation of healthy and dignified cities. Under the Swachh Bharat Mission-Urban, our cities have come a long way, and our task now is to make every toilet safe, accessible and well maintained — especially for women, children, the elderly and persons with disabilities. On World Toilet Day, I call upon every urban local body to strengthen faecal sludge management, protect the dignity of our sanitation workers, and keep toilets clean and functional for all." },
+  { role:"Principal Secretary", dept:"Urban Development Department, Government of Uttar Pradesh", photo:"logos/principal-secretary.jpg", name:"", approved:false,
+    text:"This year's World Toilet Day theme, 'Safe toilets. Equal futures.', reminds us that sanitation is about equality as much as infrastructure. Uttar Pradesh's urban local bodies must now focus on sustaining their gains: regular operation and maintenance of public toilets, safe collection and treatment of faecal sludge, and the safety of every sanitation worker under the NAMASTE scheme. I hope today's deliberations lead to practical commitments in every city." },
+  { role:"Director", dept:"Directorate of Urban Local Bodies, Uttar Pradesh", photo:"logos/director.jpg", name:"", approved:false,
+    text:"I warmly welcome all participants — our urban local bodies, sanitation workers, partner organisations and experts. Today's sessions bring together field experience and new ideas, from aspirational and mobile toilets to faecal sludge management and new technologies. I encourage every participant to take back at least one practical idea and put it into action in their city in the coming months." }
+];
+// 3) Event facts
+const EVENT_START = "2026-11-19T09:30:00+05:30";
+/* ============================================= */
+</script>
+<style>
+:root{
+  --ink:#122a26; --muted:#56685f; --line:#dbe5e0; --bg:#f7faf8; --card:#fff; --soft:#e7f2ed;
+  --brand:#0e6a5a; --brand-d:#0a4c41; --accent:#e5a13a; --err:#b3261e; --draft:#8a5a00; --draftbg:#fff3d6;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ink:#e6efeb; --muted:#a6b7b0; --line:#2b3c37; --bg:#0e1916; --card:#15221e; --soft:#1a2c27;
+  --brand:#3dbd9c; --brand-d:#2a8f75; --accent:#f0b65a; --err:#ff8a80; --draft:#f0c06a; --draftbg:#3a2e14; }}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16.5px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--brand)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+/* top bar */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14.5px;line-height:1.2;text-decoration:none;color:var(--ink)}
+.brand img{height:42px;width:auto}
+.brand small{display:block;font-weight:500;color:var(--muted)}
+nav.tabs{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.tabs a{padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14.5px}
+nav.tabs a.on{background:var(--soft);color:var(--brand)}
+nav.tabs a.reg{background:var(--brand);color:#fff}
+.menu{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;padding:7px 11px;font:inherit;color:var(--ink)}
+@media (max-width:820px){ .menu{display:block} nav.tabs{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);flex-direction:column;padding:10px 16px;border-bottom:1px solid var(--line)} nav.tabs.open{display:flex} }
+/* hero */
+.hero{background:linear-gradient(140deg,var(--brand) 0%,var(--brand-d) 100%);color:#fff;padding:70px 0 78px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-140px;bottom:-160px;width:460px;height:460px;border-radius:50%;border:70px solid rgba(255,255,255,.06)}
+.pill{display:inline-block;background:rgba(255,255,255,.15);padding:5px 13px;border-radius:999px;font-size:13.5px;font-weight:600;letter-spacing:.3px}
+.hero h1{font-size:clamp(36px,6vw,62px);margin:16px 0 10px}
+.hero .theme{font-size:clamp(18px,2.4vw,23px);opacity:.95;margin:0 0 26px;max-width:720px}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.fact{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:11px 16px;min-width:160px}
+.fact b{display:block;font-size:19px}
+.fact span{font-size:13.5px;opacity:.85}
+.btn{display:inline-block;background:var(--accent);color:#1f1603;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);margin-left:8px}
+.count{margin-top:22px;font-size:14.5px;opacity:.92}
+.count b{font-variant-numeric:tabular-nums}
+/* sections */
+section{padding:54px 0}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--brand);margin-bottom:6px}
+section h2{font-size:clamp(26px,3.6vw,36px);margin-bottom:10px}
+.lead{color:var(--muted);max-width:760px;margin:0 0 26px;font-size:17.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+.stat b{display:block;font-family:Fraunces,Georgia,serif;font-size:40px;color:var(--brand);line-height:1}
+.stat span{color:var(--muted);font-size:15px}
+.src{font-size:12.5px;color:var(--muted);margin-top:14px}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.chip{background:var(--soft);border-radius:14px;padding:16px}
+.chip b{display:block;font-size:16.5px;margin-bottom:2px}
+.chip span{font-size:14.5px;color:var(--muted)}
+/* messages */
+.msg{position:relative;display:flex;flex-direction:column;gap:12px}
+.msg .who{display:flex;gap:12px;align-items:center}
+.avatar{width:58px;height:58px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-family:Fraunces,serif;font-weight:700;color:var(--brand);font-size:20px;overflow:hidden;flex:none}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.msg .role{font-weight:700}
+.msg .dept{font-size:13.5px;color:var(--muted);line-height:1.35}
+.msg blockquote{margin:0;font-size:15.5px;border-left:3px solid var(--accent);padding-left:12px}
+.draft{align-self:flex-start;background:var(--draftbg);color:var(--draft);font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 9px;letter-spacing:.3px}
+/* agenda */
+.note{background:var(--draftbg);color:var(--draft);border-radius:12px;padding:10px 14px;font-size:14.5px;margin-bottom:18px;display:inline-block}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl time{font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums}
+.tl .t{font-weight:600}
+.tl .d{font-size:14.5px;color:var(--muted)}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--brand);background:var(--soft);border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+@media (max-width:560px){.tl li{grid-template-columns:1fr;gap:2px}}
+/* participants */
+.ptable{width:100%;border-collapse:collapse;font-size:15px}
+.ptable th,.ptable td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable th{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.ptable td.n{font-weight:700;color:var(--brand);white-space:nowrap}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.logo{background:var(--card);border:1px solid var(--line);border-radius:14px;height:96px;display:flex;align-items:center;justify-content:center;padding:12px;text-align:center}
+.logo img{max-width:100%;max-height:64px;object-fit:contain}
+.logo .nm{font-weight:700;font-size:13.5px;color:var(--muted);line-height:1.25}
+/* form */
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){form .row{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:14.5px;margin:0 0 5px}
+.req{color:var(--err)}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px;border-color:transparent}
+.field{margin-bottom:14px}
+.err{font-size:13px;color:var(--err);margin-top:3px;display:none}
+.field.bad .err{display:block}
+.field.bad input,.field.bad select{border-color:var(--err)}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{display:flex;align-items:center;gap:6px;font-weight:500;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 12px;margin:0;cursor:pointer}
+.checks input{width:auto}
+.status{font-size:15px;margin-top:10px;color:var(--err);min-height:1.2em}
+.success{display:none;text-align:center;padding:30px 10px}
+.tick{width:64px;height:64px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:32px;margin:0 auto 12px}
+.rid{display:inline-block;font-size:24px;font-weight:800;letter-spacing:1px;background:var(--soft);border-radius:10px;padding:6px 16px;margin:8px 0}
+.setup{background:var(--draftbg);color:var(--draft);border-radius:12px;padding:10px 14px;font-size:14.5px;margin-bottom:14px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;position:relative;z-index:1}
+@media (max-width:900px){.heroGrid{grid-template-columns:1fr}.heroArt{max-width:420px}}
+.heroArt svg{width:100%;height:auto;display:block}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--card);display:grid;place-items:center;margin-bottom:10px;color:var(--brand)}
+.ico svg{width:26px;height:26px}
+.statsWrap{display:grid;grid-template-columns:1fr;gap:18px;justify-items:start}
+.statsWrap .g2{width:100%}
+.statsWrap .stat b{font-size:32px}
+@media (max-width:520px){.statsWrap{grid-template-columns:1fr}}
+.donut{position:relative;width:150px;height:150px}
+.donut svg{width:150px;height:150px;transform:rotate(-90deg)}
+.donut .lbl{position:absolute;inset:0;display:grid;place-items:center;text-align:center;line-height:1.1}
+.donut .lbl b{font-family:Fraunces,serif;font-size:30px;color:var(--brand)}
+.donut .lbl span{font-size:11px;color:var(--muted);display:block;max-width:84px;margin:0 auto}
+.tl .ti{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--soft);color:var(--brand);margin-right:8px;vertical-align:-7px}
+.tl .ti svg{width:16px;height:16px}
+.pbars{display:grid;gap:12px;margin-bottom:24px}
+.pbar{display:grid;grid-template-columns:44px 210px 1fr 56px;gap:12px;align-items:center}
+@media (max-width:640px){.pbar{grid-template-columns:40px 1fr 56px}.pbar .track{grid-column:1/-1}}
+.pbar .pi{width:40px;height:40px;border-radius:12px;background:var(--soft);color:var(--brand);display:grid;place-items:center}
+.pbar .pi svg{width:22px;height:22px}
+.pbar .pn{font-weight:600;font-size:15px;line-height:1.25}
+.pbar .track{height:14px;background:var(--soft);border-radius:999px;overflow:hidden}
+.pbar .fill{height:100%;background:var(--brand);border-radius:999px}
+.pbar .pv{font-weight:700;color:var(--brand);text-align:right;font-variant-numeric:tabular-nums}
+.wave{display:block;width:100%;height:40px;margin-top:-1px}
+.view{display:none}
+.view.on{display:block}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home"><span id="orgLogo"></span><span>Swachh Bharat Mission-Urban<small>Directorate of Urban Local Bodies, Uttar Pradesh</small></span></a>
+    <button class="menu" id="menuBtn" aria-label="Menu">☰ Menu</button>
+    <nav class="tabs" id="tabs">
+      <a href="#home">About</a>
+      <a href="#messages">Messages</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#participants">Participants</a>
+      <a href="#register" class="reg">Register</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HOME / ABOUT ============ -->
+<div class="view" id="v-home">
+  <div class="hero">
+    <div class="wrap heroGrid"><div>
+      <span class="pill">State Level Programme · Uttar Pradesh</span>
+      <h1>World Toilet Day 2026</h1>
+      <p class="theme"><b>“Safe toilets. Equal futures.”</b> — deliberations on sanitation, faecal sludge management, the NAMASTE scheme, aspirational toilets and new technologies.</p>
+      <div class="facts">
+        <div class="fact"><b>19 November 2026</b><span>Thursday</span></div>
+        <div class="fact"><b>9:30 AM onwards</b><span>Registration & high tea</span></div>
+        <div class="fact"><b>UTRI, Lucknow</b><span>Venue</span></div>
+      </div>
+      <a class="btn" href="#register">Register now →</a><a class="btn alt" href="#agenda">View agenda</a>
+      <div class="count" id="countdown"></div>
+    </div><div class="heroArt" aria-hidden="true">
+<svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="210" cy="170" r="150" fill="rgba(255,255,255,.08)"/>
+  <circle cx="210" cy="170" r="110" fill="rgba(255,255,255,.07)"/>
+  <!-- ground -->
+  <rect x="40" y="268" width="340" height="10" rx="5" fill="rgba(255,255,255,.25)"/>
+  <!-- trees -->
+  <rect x="62" y="210" width="8" height="60" rx="3" fill="#6b4d2e"/><circle cx="66" cy="200" r="30" fill="#2fa37f"/><circle cx="52" cy="214" r="18" fill="#27926f"/>
+  <rect x="352" y="222" width="7" height="48" rx="3" fill="#6b4d2e"/><circle cx="355" cy="212" r="24" fill="#2fa37f"/>
+  <!-- toilet block -->
+  <rect x="110" y="140" width="200" height="130" rx="8" fill="#f7faf8"/>
+  <path d="M98 146 L210 92 L322 146 Z" fill="#e5a13a"/>
+  <rect x="98" y="140" width="224" height="12" rx="4" fill="#c9852a"/>
+  <!-- solar panel -->
+  <g transform="translate(232 104) rotate(-25)"><rect width="46" height="20" rx="2" fill="#1f3b5c"/><path d="M15 0v20M31 0v20M0 10h46" stroke="#5c87b8" stroke-width="1.5"/></g>
+  <!-- doors -->
+  <rect x="128" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
+  <rect x="188" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
+  <rect x="248" y="176" width="44" height="94" rx="4" fill="#0e6a5a"/>
+  <circle cx="165" cy="226" r="3" fill="#e5a13a"/><circle cx="225" cy="226" r="3" fill="#e5a13a"/><circle cx="285" cy="226" r="3" fill="#e5a13a"/>
+  <!-- pictograms: woman, man, accessible -->
+  <g fill="#fff">
+    <circle cx="150" cy="160" r="5"/><path d="M144 168h12l4 14h-20z"/>
+    <circle cx="210" cy="160" r="5"/><rect x="204" y="167" width="12" height="15" rx="3"/>
+    <circle cx="268" cy="159" r="4.5"/><path d="M266 166h4v8h7l3 8h-4l-2-5h-8z"/><circle cx="268" cy="180" r="6" fill="none" stroke="#fff" stroke-width="2.5"/>
+  </g>
+  <!-- water tank + drop -->
+  <rect x="140" y="112" width="36" height="22" rx="4" fill="#cfe7f5"/><rect x="146" y="106" width="24" height="8" rx="3" fill="#9dc9e3"/>
+  <!-- sparkles -->
+  <g fill="#fff" opacity=".9"><path d="M60 110l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M370 120l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><path d="M330 60l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
+  <!-- water drop with check -->
+  <path d="M355 290c0-14 18-34 18-34s18 20 18 34a18 18 0 0 1-36 0z" fill="#5fb8e8" transform="translate(-20 -170)"/>
+  <path d="M341 122l6 6 11-12" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap g2">
+      <div>
+        <div class="eyebrow">About the day</div>
+        <h2>Why World Toilet Day matters</h2>
+        <p>World Toilet Day is observed every year on <b>19 November</b> to inspire action on the global sanitation crisis and to accelerate progress towards Sustainable Development Goal 6 — water and sanitation for all by 2030. It began as an initiative of the World Toilet Organization in 2001 and has been an official United Nations observance since 2013.</p>
+        <p>The 2026 campaign, <b>“Safe toilets. Equal futures.”</b>, focuses on the link between sanitation and gender equality — calling for toilets that are safe, private and accessible for women, girls and everyone else, without discrimination.</p>
+      </div>
+      <div class="card">
+        <div class="statsWrap">
+          <div class="donut" role="img" aria-label="58% of the world's population used safely managed sanitation in 2024">
+            <svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--soft)" stroke-width="4"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="var(--brand)" stroke-width="4" stroke-dasharray="58 42" stroke-linecap="round"/></svg>
+            <div class="lbl"><div><b>58%</b><span>safely managed, 2024</span></div></div>
+          </div>
+          <div class="g2" style="gap:14px">
+            <div class="stat"><b>3.4 bn</b><span>people still lack safely managed sanitation</span></div>
+            <div class="stat"><b>354 mn</b><span>people still practise open defecation</span></div>
+            <div class="stat"><b>48%→58%</b><span>global coverage, 2015 to 2024</span></div>
+            <div class="stat"><b>2030</b><span>target year for SDG 6.2</span></div>
+          </div>
+        </div>
+        <div class="src">Source: WHO/UNICEF Joint Monitoring Programme, Progress on household drinking water, sanitation and hygiene 2000–2024 (2025); UN-Water.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="eyebrow">Our context</div>
+      <h2>Sanitation in urban Uttar Pradesh</h2>
+      <p class="lead">Under the Swachh Bharat Mission-Urban, cities across Uttar Pradesh have built household, community and public toilets and moved towards open defecation free status. Under SBM-U 2.0, the focus has shifted to sustaining these gains — safe and well-maintained toilets, safe management of faecal sludge and used water, and the dignity and safety of sanitation workers.</p>
+      <div class="chips">
+        <div class="chip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></div><b>Safe & accessible toilets</b><span>Community, public and aspirational toilets that are clean, safe and inclusive</span></div>
+        <div class="chip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="8" rx="4"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><b>Faecal sludge management</b><span>Safe emptying, transport and treatment of faecal sludge and septage</span></div>
+        <div class="chip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><b>NAMASTE</b><span>Safety, dignity and mechanisation for sanitation workers</span></div>
+        <div class="chip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="13" height="12" rx="2"/><path d="M7 4v12M12 4v12"/><path d="M16 9h3l2 3v4h-5"/><circle cx="7" cy="18.5" r="1.8"/><circle cx="18" cy="18.5" r="1.8"/></svg></div><b>Mobile toilets</b><span>Flexible sanitation for fairs, gatherings and underserved areas</span></div>
+        <div class="chip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div><b>New technology</b><span>Innovations in toilet design, O&M and treatment</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+        <div><h3 style="font-size:24px">Join us on 19 November</h3><p style="margin:4px 0 0;color:var(--muted)">About 280–300 participants from urban local bodies, partner organisations, academia and the Directorate.</p></div>
+        <a class="btn" href="#register" style="background:var(--brand);color:#fff">Register →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ MESSAGES ============ -->
+<div class="view" id="v-messages">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Messages</div>
+      <h2>Messages from the leadership</h2>
+      <p class="lead">Messages on the occasion of World Toilet Day 2026.</p>
+      <div class="g3" id="msgGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AGENDA ============ -->
+<div class="view" id="v-agenda">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Programme</div>
+      <h2>Agenda</h2>
+      <p class="lead">Thursday, 19 November 2026 · UTRI, Lucknow</p>
+      <div class="note">Tentative — the agenda may change.</div>
+      <div class="card">
+        <ul class="tl">
+          <li><time>09:30 – 10:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Registration and high tea</div></div></li>
+          <li><time>10:00 – 10:10</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span>Flag-off of mobile toilets</div></div></li>
+          <li><time>10:10 – 10:15</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Welcome of guests</div></div></li>
+          <li><time>10:15 – 10:30</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/><path d="M7 12l3-3 2 2 4-4"/></svg></span>Context setting</div></div></li>
+          <li><time>10:30 – 11:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Address by the Hon'ble Minister</div></div></li>
+          <li><time>11:00 – 11:45</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></span>Sanitation<span class="tag">Panel</span></div><div class="d">Sustaining safe, inclusive and well-maintained urban sanitation</div></div></li>
+          <li><time>11:45 – 12:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span>NAMASTE scheme — overview<span class="tag">Presentation</span></div><div class="d">Safety and dignity of sanitation workers</div></div></li>
+          <li><time>12:00 – 12:45</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="8" rx="4"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>WATSAN and faecal sludge management<span class="tag">Panel</span></div></div></li>
+          <li><time>12:45 – 01:05</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></span>New technology and innovations<span class="tag">Session 1</span></div></div></li>
+          <li><time>01:05 – 01:20</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>Aspirational toilets<span class="tag">Session 2</span></div></div></li>
+          <li><time>01:20 – 01:25</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Guidance and Q&A — Director</div></div></li>
+          <li><time>01:25 – 01:30</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Vote of thanks</div></div></li>
+          <li><time>01:30 onwards</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Lunch</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PARTICIPANTS ============ -->
+<div class="view" id="v-participants">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Who is coming</div>
+      <h2>Participants</h2>
+      <p class="lead">About 280–300 participants are expected.</p>
+      <div class="card" style="overflow-x:auto">
+        <div class="pbars" role="img" aria-label="Expected participants by group"><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></div><div class="pn">Urban local bodies (FSM)</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pv">~110</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><div class="pn">Sanitation workers</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div><div class="pn">Panellists & experts</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></div><div class="pn">Directorate & officials</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><div class="pn">Partner organisations</div><div class="track"><div class="fill" style="width:23%"></div></div><div class="pv">20–25</div></div></div>
+        <table class="ptable">
+          <thead><tr><th>Group</th><th>Details</th><th>Expected</th></tr></thead>
+          <tbody>
+            <tr><td><b>Urban local bodies (FSM)</b></td><td>Representatives of selected urban local bodies working on faecal sludge management</td><td class="n">~110</td></tr>
+            <tr><td><b>Sanitation workers</b></td><td>Frontline sanitation workers, Lucknow Municipal Corporation</td><td class="n">50</td></tr>
+            <tr><td><b>Partner organisations</b></td><td>Organisations working on sanitation, FSM and the NAMASTE scheme</td><td class="n">20–25</td></tr>
+            <tr><td><b>Panellists & experts</b></td><td>Experts for the technical sessions and panel discussions</td><td class="n">50</td></tr>
+            <tr><td><b>Directorate & officials</b></td><td>Officers and staff of the Directorate (SBM-U) and municipal corporation</td><td class="n">50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="eyebrow" style="margin-top:40px">Partners</div>
+      <h2 style="font-size:28px;margin-bottom:18px">Knowledge & implementation partners</h2>
+      <div class="logos" id="logos"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ REGISTER ============ -->
+<div class="view" id="v-register">
+  <section>
+    <div class="wrap">
+      <div class="card" style="max-width:780px;margin:0 auto">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:6px"><div class="ico" style="background:var(--soft);margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></div><div class="eyebrow" style="margin:0">Registration</div></div>
+        <h2>Register for World Toilet Day 2026</h2>
+        <p class="lead" style="margin-bottom:18px">19 November 2026 · UTRI, Lucknow · Fields marked * are required.</p>
+        <div class="setup" id="setupNotice" hidden>⚙️ This form is not yet connected to the Google Sheet. Add the Web App URL as described in SETUP.txt.</div>
+        <form id="regForm" novalidate>
+          <div class="row">
+            <div class="field"><label for="name">Full name <span class="req">*</span></label><input id="name" name="name" autocomplete="name"><div class="err">Please enter your name</div></div>
+            <div class="field"><label for="designation">Designation <span class="req">*</span></label><input id="designation" name="designation"><div class="err">Please enter your designation</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="category">Participant category <span class="req">*</span></label>
+              <select id="category" name="category">
+                <option value="">— Select —</option>
+                <option>Urban local body representative</option>
+                <option>Sanitation worker</option>
+                <option>Partner organisation / NGO</option>
+                <option>Panellist / expert</option>
+                <option>Directorate / government official</option>
+                <option>Other</option>
+              </select><div class="err">Please select a category</div></div>
+            <div class="field"><label for="organisation">Organisation / urban local body <span class="req">*</span></label><input id="organisation" name="organisation" placeholder="e.g. Nagar Palika Parishad …"><div class="err">Please enter your organisation</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="district">District <span class="req">*</span></label><input id="district" name="district" list="districts"><datalist id="districts"></datalist><div class="err">Please enter your district</div></div>
+            <div class="field"><label for="mobile">Mobile number <span class="req">*</span></label><input id="mobile" name="mobile" inputmode="numeric" maxlength="10" placeholder="10 digits"><div class="err">Please enter a valid 10-digit mobile number</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><div class="err">Please enter a valid email</div></div>
+            <div class="field"><label for="gender">Gender</label><select id="gender" name="gender"><option value="">— Select —</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+          </div>
+          <div class="field"><label>Sessions of interest</label>
+            <div class="checks">
+              <label><input type="checkbox" name="sessions" value="Sanitation panel"> Sanitation</label>
+              <label><input type="checkbox" name="sessions" value="NAMASTE"> NAMASTE</label>
+              <label><input type="checkbox" name="sessions" value="WATSAN & FSM"> WATSAN & FSM</label>
+              <label><input type="checkbox" name="sessions" value="New technology"> New technology</label>
+              <label><input type="checkbox" name="sessions" value="Aspirational toilets"> Aspirational toilets</label>
+            </div></div>
+          <div class="row">
+            <div class="field"><label for="lunch">Will you stay for lunch?</label><select id="lunch" name="lunch"><option>Yes</option><option>No</option></select></div>
+            <div class="field"><label for="access">Accessibility needs</label><input id="access" name="access" placeholder="Optional"></div>
+          </div>
+          <div class="field"><label for="remarks">Remarks / suggestions</label><textarea id="remarks" name="remarks" rows="3"></textarea></div>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button class="btn" type="submit" id="submitBtn" style="background:var(--brand);color:#fff;width:100%">Submit registration</button>
+          <div class="status" id="status" role="status"></div>
+        </form>
+        <div class="success" id="success">
+          <div class="tick">✓</div>
+          <h3 style="font-size:26px">You're registered</h3>
+          <p style="margin:6px 0 0">Your registration ID</p>
+          <div class="rid" id="rid">—</div>
+          <p style="color:var(--muted);margin:6px 0 0">Please keep a screenshot and show it at the registration desk.</p>
+          <p><a href="#register" id="again">Register another person</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · World Toilet Day, 19 November 2026 · UTRI, Lucknow</div></footer>
+
+<script>
+/* ---------- partners (put logo files in logos/) ---------- */
+const PARTNERS=[["UTRI, Lucknow","logos/utri.png"],["Sulabh International","logos/sulabh.png"],["WASHi","logos/washi.png"],["WaterAid India","logos/wateraid.png"],["IIT (BHU)","logos/iit-bhu.png"],["ATI Uttarakhand","logos/ati-uttarakhand.png"],["AIILSG","logos/aiilsg.png"],["Dr. Ambedkar University","logos/ambedkar-university.png"],["RCS","logos/rcs.png"],["GCA","logos/gca.png"],["Lucknow Municipal Corporation","logos/lmc.png"],["NAMASTE","logos/namaste.png"]];
+const lg=document.getElementById('logos');
+PARTNERS.forEach(([n,s])=>{const d=document.createElement('div');d.className='logo';d.title=n;const i=new Image();i.alt=n;i.src=s;i.onerror=()=>{d.innerHTML='<span class="nm">'+n+'</span>'};d.appendChild(i);lg.appendChild(d)});
+(()=>{const i=new Image();i.alt='';i.src='logos/organiser.png';i.onload=()=>document.getElementById('orgLogo').appendChild(i)})();
+
+/* ---------- messages ---------- */
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('msgGrid').innerHTML=MESSAGES.map((m,k)=>`
+  <div class="card msg">${m.approved?'':'<span class="draft">DRAFT – awaiting approval</span>'}
+    <div class="who"><div class="avatar" id="av${k}">${esc(m.role.replace("Hon'ble ","").charAt(0))}</div>
+      <div><div class="role">${esc(m.name?m.name:m.role)}</div><div class="dept">${m.name?esc(m.role)+', ':''}${esc(m.dept)}</div></div></div>
+    <blockquote>${esc(m.text)}</blockquote>
+  </div>`).join('');
+MESSAGES.forEach((m,k)=>{const i=new Image();i.alt='';i.src=m.photo;i.onload=()=>{const a=document.getElementById('av'+k);a.textContent='';a.appendChild(i)}});
+
+/* ---------- tabs (work without relying on URL hash) ---------- */
+const views=['home','messages','agenda','participants','register'];
+function go(v,push){
+  if(!views.includes(v)) v='home';
+  views.forEach(x=>document.getElementById('v-'+x).classList.toggle('on',x===v));
+  document.querySelectorAll('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.view===v&&v!=='register'));
+  document.getElementById('tabs').classList.remove('open');
+  window.scrollTo(0,0);
+  if(push){ try{ history.replaceState(null,'','#'+v); }catch(_){} }
+}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.dataset.view=a.getAttribute('href').slice(1); });
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[data-view]'); if(!a) return;
+  e.preventDefault(); go(a.dataset.view,true);
+});
+let start='home'; try{ start=(location.hash||'#home').slice(1); }catch(_){}
+go(start,false);
+window.addEventListener('hashchange',()=>{ try{ go(location.hash.slice(1),false); }catch(_){} });
+document.getElementById('menuBtn').onclick=()=>document.getElementById('tabs').classList.toggle('open');
+
+/* ---------- countdown ---------- */
+const target=new Date(EVENT_START);
+function tick(){const ms=target-new Date(),el=document.getElementById('countdown');
+  if(ms<=0){el.textContent='';return}
+  const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+  el.innerHTML='Starts in <b>'+d+'</b> days <b>'+h+'</b> hrs <b>'+m+'</b> min';}
+tick(); setInterval(tick,30000);
+
+/* ---------- districts ---------- */
+const D="Agra,Aligarh,Ambedkar Nagar,Amethi,Amroha,Auraiya,Ayodhya,Azamgarh,Baghpat,Bahraich,Ballia,Balrampur,Banda,Barabanki,Bareilly,Basti,Bhadohi,Bijnor,Budaun,Bulandshahr,Chandauli,Chitrakoot,Deoria,Etah,Etawah,Farrukhabad,Fatehpur,Firozabad,Gautam Buddh Nagar,Ghaziabad,Ghazipur,Gonda,Gorakhpur,Hamirpur,Hapur,Hardoi,Hathras,Jalaun,Jaunpur,Jhansi,Kannauj,Kanpur Dehat,Kanpur Nagar,Kasganj,Kaushambi,Kushinagar,Lakhimpur Kheri,Lalitpur,Lucknow,Maharajganj,Mahoba,Mainpuri,Mathura,Mau,Meerut,Mirzapur,Moradabad,Muzaffarnagar,Pilibhit,Pratapgarh,Prayagraj,Raebareli,Rampur,Saharanpur,Sambhal,Sant Kabir Nagar,Shahjahanpur,Shamli,Shravasti,Siddharthnagar,Sitapur,Sonbhadra,Sultanpur,Unnao,Varanasi".split(',');
+document.getElementById('districts').innerHTML=D.map(x=>'<option value="'+x+'">').join('');
+
+/* ---------- registration ---------- */
+const configured=SCRIPT_URL.startsWith('https://script.google.com/');
+if(!configured) document.getElementById('setupNotice').hidden=false;
+const form=document.getElementById('regForm'),st=document.getElementById('status'),btn=document.getElementById('submitBtn');
+form.mobile.addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,10)});
+function validate(){let ok=true;form.querySelectorAll('.field').forEach(f=>f.classList.remove('bad'));
+  const bad=id=>{document.getElementById(id).closest('.field').classList.add('bad');ok=false};
+  ['name','designation','category','organisation','district'].forEach(id=>{if(!form[id].value.trim())bad(id)});
+  if(!/^[6-9]\d{9}$/.test(form.mobile.value.trim()))bad('mobile');
+  const em=form.email.value.trim(); if(em&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))bad('email'); return ok;}
+form.addEventListener('submit',async e=>{e.preventDefault();st.textContent='';
+  if(!validate()){st.textContent='Please correct the fields marked in red.';return}
+  if(form.website.value)return;
+  if(!configured){st.textContent='Registration is not connected yet (see SETUP.txt).';return}
+  const fd=new URLSearchParams();
+  ['name','designation','category','organisation','district','mobile','email','gender','lunch','access','remarks'].forEach(k=>fd.append(k,form[k].value.trim()));
+  fd.append('sessions',[...form.querySelectorAll('input[name=sessions]:checked')].map(c=>c.value).join(', '));
+  btn.disabled=true;btn.textContent='Submitting…';
+  try{const r=await fetch(SCRIPT_URL,{method:'POST',body:fd});const j=await r.json();if(!j.ok)throw 0;
+    document.getElementById('rid').textContent=j.id;form.style.display='none';document.getElementById('success').style.display='block';}
+  catch(_){st.textContent='Registration could not be submitted. Please check your internet connection and try again.'}
+  finally{btn.disabled=false;btn.textContent='Submit registration'}});
+document.getElementById('again').addEventListener('click',()=>{form.reset();form.style.display='block';document.getElementById('success').style.display='none'});
+</script>
+</body>
+</html>

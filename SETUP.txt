@@ -1,0 +1,48 @@
+WORLD TOILET DAY 2026 — EVENT WEBSITE: SETUP (about 15 minutes)
+================================================================
+
+The website has 5 tabs: About, Messages, Agenda, Participants and Register.
+Everything you may need to change is at the top of index.html, in the block
+marked "EDIT HERE". Open index.html in Notepad to edit it.
+
+A. CONNECT REGISTRATIONS TO A GOOGLE SHEET
+1. In Google Drive, create a new Google Sheet, e.g. "WTD 2026 Registrations".
+2. In the Sheet: Extensions > Apps Script.
+3. Delete the sample code, paste the full contents of "apps_script.gs", and Save.
+4. Deploy > New deployment > Select type: "Web app"
+      Execute as: Me
+      Who has access: Anyone
+   Click Deploy and allow the permissions Google asks for.
+5. Copy the "Web app URL" (https://script.google.com/macros/s/.../exec).
+6. In index.html, find:   const SCRIPT_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+   and paste your URL between the quotes. Save.
+7. Open index.html, go to the Register tab and submit a test entry.
+   A row should appear in the "Registrations" tab of your Sheet. Delete the test row afterwards.
+
+   - Registering again with the same mobile number returns the same Registration ID (no duplicate row).
+   - If you change the script later: Deploy > Manage deployments > Edit > Version: New version > Deploy (the URL stays the same).
+   - To close registrations: Deploy > Manage deployments > Archive.
+
+B. MESSAGES (Minister, Principal Secretary, Director)
+- The messages in the MESSAGES list are DRAFTS written for approval. Each shows a
+  "DRAFT – awaiting approval" label on the website.
+- Send each draft to the office concerned. When approved, replace the text if needed,
+  add the name in  name:""  (optional) and change  approved:false  to  approved:true.
+- Do not publish the site with draft labels removed until the messages are approved.
+- Photos (optional): put them in the logos folder as minister.jpg, principal-secretary.jpg, director.jpg.
+
+C. LOGOS
+Put official logo files in the "logos" folder with these exact names:
+   organiser.png (header), utri.png, sulabh.png, washi.png, wateraid.png, iit-bhu.png,
+   ati-uttarakhand.png, aiilsg.png, ambedkar-university.png, rcs.png, gca.png, lmc.png, namaste.png
+Where a file is missing, the organisation's name is shown instead.
+Use only logos received from, or approved by, the organisations concerned.
+To add or remove a partner, edit the PARTNERS list near the bottom of index.html.
+
+D. AGENDA
+The agenda is shown as "Tentative". Edit the times or sessions in the AGENDA section of index.html.
+
+E. PUTTING THE WEBSITE ONLINE
+Upload the whole "wtd_conf" folder (index.html + logos) to any web hosting — for example the
+Directorate / NIC website, or a free host such as GitHub Pages or Netlify — and share the link
+or a QR code in invitations and on WhatsApp.
