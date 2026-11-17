@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Toilet Day 2026 — Uttar Pradesh</title>
+<title>UP Toilet & Sanitation Conclave 2026 · World Toilet Day Campaign</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
@@ -20,7 +20,20 @@ const MESSAGES = [
     text:"I warmly welcome all participants — our urban local bodies, sanitation workers, partner organisations and experts. Today's sessions bring together field experience and new ideas, from aspirational and mobile toilets to faecal sludge management and new technologies. I encourage every participant to take back at least one practical idea and put it into action in their city in the coming months." }
 ];
 // 3) Event facts
-const EVENT_START = "2026-11-19T09:30:00+05:30";
+const EVENT_START = "2026-11-23T09:30:00+05:30";
+const VENUE = "Lucknow (venue to be announced)";   // e.g. "Indira Gandhi Pratishthan, Lucknow"
+// 4) Campaign reporting links
+const FORM_URL = "https://forms.gle/3JhCFhsUHP38FVUX9";
+const PPT_URL  = "https://shorturl.at/0UJSw";
+// 5) Updates (newest first). Add a line here to publish an update.
+const UPDATES = [
+  { date:"17 Nov 2026", text:"Campaign letter issued to all urban local bodies. Daily reporting form and PPT template are now live (see the Campaign page)." },
+  { date:"16 Nov 2026", text:"Ministry of Housing and Urban Affairs, Government of India, issued guidance for World Toilet Day activities focused on community and public toilets and the FACES parameters." }
+];
+// 6) Best practices — fill after evaluation; leave empty until declared
+const BEST_PRACTICES = [
+  // { ulb:"Nagar Palika Parishad …", district:"…", title:"…", text:"…" }
+];
 /* ============================================= */
 </script>
 <style>
@@ -165,9 +178,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <button class="menu" id="menuBtn" aria-label="Menu">☰ Menu</button>
     <nav class="tabs" id="tabs">
       <a href="#home">About</a>
-      <a href="#messages">Messages</a>
+      <a href="#campaign">Campaign</a>
       <a href="#agenda">Agenda</a>
+      <a href="#messages">Messages</a>
       <a href="#participants">Participants</a>
+      <a href="#updates">Updates</a>
       <a href="#register" class="reg">Register</a>
     </nav>
   </div>
@@ -177,15 +192,15 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 <div class="view" id="v-home">
   <div class="hero">
     <div class="wrap heroGrid"><div>
-      <span class="pill">State Level Programme · Uttar Pradesh</span>
-      <h1>World Toilet Day 2026</h1>
-      <p class="theme"><b>“Safe toilets. Equal futures.”</b> — deliberations on sanitation, faecal sludge management, the NAMASTE scheme, aspirational toilets and new technologies.</p>
+      <span class="pill">World Toilet Day 2026 · Uttar Pradesh</span>
+      <h1>UP Toilet & Sanitation Conclave–2026</h1>
+      <p class="theme">The closing event of the <b>five-day State-wide sanitation campaign (19–23 November)</b> — public and community toilets, NAMASTE, faecal sludge management and new technologies.</p>
       <div class="facts">
-        <div class="fact"><b>19 November 2026</b><span>Thursday</span></div>
-        <div class="fact"><b>9:30 AM onwards</b><span>Registration & high tea</span></div>
-        <div class="fact"><b>UTRI, Lucknow</b><span>Venue</span></div>
+        <div class="fact"><b>23 November 2026</b><span>Monday · 9:30 AM onwards</span></div>
+        <div class="fact"><b>19–23 November</b><span>Campaign in all ULBs</span></div>
+        <div class="fact"><b class="venue">Lucknow</b><span>Venue</span></div>
       </div>
-      <a class="btn" href="#register">Register now →</a><a class="btn alt" href="#agenda">View agenda</a>
+      <a class="btn" href="#campaign">Campaign 19–23 Nov →</a><a class="btn alt" href="#agenda">Conclave agenda</a>
       <div class="count" id="countdown"></div>
     </div><div class="heroArt" aria-hidden="true">
 <img src="logos/hero.png" alt="Public toilet, faecal sludge treatment plant, desludging vehicle and a sanitation worker"></div>
@@ -236,8 +251,40 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   <section style="padding-top:0">
     <div class="wrap">
       <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-        <div><h3 style="font-size:24px">Join us on 19 November</h3><p style="margin:4px 0 0;color:var(--muted)">About 280–300 participants from urban local bodies, partner organisations, academia and the Directorate.</p></div>
-        <a class="btn" href="#register" style="background:var(--brand);color:#fff">Register →</a>
+        <div><h3 style="font-size:24px">Conclave on 23 November · by invitation</h3><p style="margin:4px 0 0;color:var(--muted)">About 350 invited participants — urban local bodies, district PMUs, Government of India and State officials, experts, partner institutions and sanitation workers.</p></div>
+        <a class="btn" href="#register" style="background:var(--brand);color:#fff">Invited? Register →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CAMPAIGN ============ -->
+<div class="view" id="v-campaign">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">19–23 November 2026</div>
+      <h2>Five-day State-wide sanitation campaign</h2>
+      <p class="lead">On World Toilet Day, every urban local body in Uttar Pradesh runs a five-day campaign that puts community and public toilets at the centre, following the guidance of the Ministry of Housing and Urban Affairs, Government of India. Toilets are checked against five <b>FACES</b> parameters.</p>
+      <div class="chips" style="margin-bottom:34px"><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">F</div><b>Functional</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">A</div><b>Accessible</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">C</div><b>Clean</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">E</div><b>Eco-friendly</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">S</div><b>Safe</b></div></div>
+      <div class="g2">
+        <div>
+          <h3 style="font-size:22px;margin-bottom:10px">Day-wise plan (suggestive)</h3>
+          <div class="card"><ul class="tl"><li><time>Day 1<br><small>Thu, 19 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></span>Inauguration of new community, public and aspirational toilets; campaign launch on World Toilet Day</div></div></li><li><time>Day 2<br><small>Fri, 20 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Public audit of CTs/PTs on the FACES parameters, led by women SHGs and community groups</div></div></li><li><time>Day 3<br><small>Sat, 21 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span>Repair, refurbishment and upgrading; water, light, handwashing, menstrual hygiene and accessibility</div></div></li><li><time>Day 4<br><small>Sun, 22 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3l-7 7"/><path d="M10 9l5 5-3 7-9-9z"/></svg></span>Special cleanliness drives and awareness in schools, markets and RWAs; sustaining ODF status</div></div></li><li><time>Day 5<br><small>Mon, 23 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span>Toilet locator and complaint signage, felicitation of sanitation workers, campaign close and State Conclave</div></div></li></ul></div>
+          <p style="color:var(--muted);font-size:14px;margin-top:8px">ULBs may change the order to suit local needs, but all activities are to be held during the campaign.</p>
+        </div>
+        <div>
+          <h3 style="font-size:22px;margin-bottom:10px">Daily reporting for ULBs</h3>
+          <div class="card">
+            <p style="margin-top:0">Every ULB puts the photos and details of <b>all activities of the day in one PPT</b> and uploads it the <b>same day</b> on the reporting form — <b>one PPT per day, five in all</b>.</p>
+            <p><a class="btn" id="formLink" href="#" target="_blank" rel="noopener" style="background:var(--brand);color:#fff">⬆ Daily reporting form</a></p>
+            <p><a class="btn alt" id="pptLink" href="#" target="_blank" rel="noopener" style="margin-left:0">Download PPT template</a></p>
+            <ul style="color:var(--muted);font-size:14.5px;padding-left:18px;margin-bottom:0">
+              <li>File name: District_ULB_DayN (e.g. Lucknow_NagarNigamLucknow_Day1)</li>
+              <li>Clear, geo-tagged photos; before/after photos for repairs and cleaning</li>
+              <li>Keep each PPT under 10 MB; sign in to a Google account to upload</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -249,7 +296,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">Messages</div>
       <h2>Messages from the leadership</h2>
-      <p class="lead">Messages on the occasion of World Toilet Day 2026.</p>
+      <p class="lead">Messages on the occasion of World Toilet Day 2026 and the UP Toilet & Sanitation Conclave.</p>
       <div class="g3" id="msgGrid"></div>
     </div>
   </section>
@@ -261,23 +308,26 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">Programme</div>
       <h2>Agenda</h2>
-      <p class="lead">Thursday, 19 November 2026 · UTRI, Lucknow</p>
-      <div class="note">Tentative — the agenda may change.</div>
+      <p class="lead">Monday, 23 November 2026 · <span class="venue">Lucknow</span></p>
+      <div class="note">Tentative. *Timings after the flag-off will be adjusted to the arrival of the Hon'ble Minister.</div>
       <div class="card">
         <ul class="tl">
-          <li><time>09:30 – 10:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Registration and high tea</div></div></li>
-          <li><time>10:00 – 10:10</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span>Flag-off of mobile toilets</div></div></li>
-          <li><time>10:10 – 10:15</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Welcome of guests</div></div></li>
-          <li><time>10:15 – 10:30</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/><path d="M7 12l3-3 2 2 4-4"/></svg></span>Context setting</div></div></li>
-          <li><time>10:30 – 11:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Address by the Hon'ble Minister</div></div></li>
-          <li><time>11:00 – 11:45</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></span>Sanitation<span class="tag">Panel</span></div><div class="d">Sustaining safe, inclusive and well-maintained urban sanitation</div></div></li>
-          <li><time>11:45 – 12:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span>NAMASTE scheme — overview<span class="tag">Presentation</span></div><div class="d">Safety and dignity of sanitation workers</div></div></li>
-          <li><time>12:00 – 12:45</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="8" rx="4"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>WATSAN and faecal sludge management<span class="tag">Panel</span></div></div></li>
-          <li><time>12:45 – 01:05</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></span>New technology and innovations<span class="tag">Session 1</span></div></div></li>
-          <li><time>01:05 – 01:20</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>Aspirational toilets<span class="tag">Session 2</span></div></div></li>
-          <li><time>01:20 – 01:25</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Guidance and Q&A — Director</div></div></li>
-          <li><time>01:25 – 01:30</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Vote of thanks</div></div></li>
-          <li><time>01:30 onwards</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Lunch</div></div></li>
+          <li><time>09:30 – 10:00</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Registration, high tea and sanitation technology exhibition</div></div></li>
+          <li><time>10:00 – 10:10</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Arrival of guests and inauguration</div></div></li>
+          <li><time>10:10 – 10:20</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Welcome address</div></div></li>
+          <li><time>10:20 – 10:40</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/><path d="M7 12l3-3 2 2 4-4"/></svg></span>Five-day State-wide campaign and sanitation achievements of the State<span class=tag>Presentation</span></div></div></li>
+          <li><time>10:40 – 10:55</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Address by the Principal Secretary, Urban Development</div></div></li>
+          <li><time>On arrival of the Hon'ble Minister</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span>Welcome, flag-off of mobile toilet units and launch of the FSM Portal</div></div></li>
+          <li><time>Thereafter</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Address by the Hon'ble Minister</div></div></li>
+          <li><time>Thereafter</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Special address — sanitation, human dignity and inclusive urban development</div></div></li>
+          <li><time>11:45 – 12:15*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></span>Public and community toilets<span class=tag>Technical Session I</span></div></div></li>
+          <li><time>12:15 – 12:45*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span>NAMASTE — safety of sanitation workers and mechanisation<span class=tag>Technical Session II</span></div></div></li>
+          <li><time>12:45 – 01:15*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="8" rx="4"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>Faecal sludge management and sustainable sanitation<span class=tag>Technical Session III</span></div></div></li>
+          <li><time>01:15 – 01:35*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></span>Best practices presented by urban local bodies</div></div></li>
+          <li><time>01:35 – 02:00*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 21l5-3 5 3-1.5-7.5"/></svg></span>Felicitation of outstanding ULBs and sanitation workers</div></div></li>
+          <li><time>02:00 – 02:10*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></span>Collective pledge for inclusive sanitation</div></div></li>
+          <li><time>02:10 – 02:15*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 15"/></svg></span>Vote of thanks</div></div></li>
+          <li><time>02:15 – 02:30*</time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3v3M12 3v3"/></svg></span>Lunch</div></div></li>
         </ul>
       </div>
     </div>
@@ -290,17 +340,22 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">Who is coming</div>
       <h2>Participants</h2>
-      <p class="lead">About 280–300 participants are expected.</p>
+      <p class="lead">About <b>350</b> participants are expected. Participation is <b>by invitation only</b>.</p>
       <div class="card" style="overflow-x:auto">
-        <div class="pbars" role="img" aria-label="Expected participants by group"><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></div><div class="pn">Urban local bodies (FSM)</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pv">~110</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><div class="pn">Sanitation workers</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div><div class="pn">Panellists & experts</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></div><div class="pn">Directorate & officials</div><div class="track"><div class="fill" style="width:45%"></div></div><div class="pv">50</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><div class="pn">Partner organisations</div><div class="track"><div class="fill" style="width:23%"></div></div><div class="pv">20–25</div></div></div>
+        <div class="pbars" role="img" aria-label="Expected participants by group"><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-5 9 5"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></div><div class="pn">Urban local bodies — FSM cities</div><div class="track"><div class="fill" style="width:96%"></div></div><div class="pv">72</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></div><div class="pn">District PMUs</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="pv">75</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><div class="pn">Government officials</div><div class="track"><div class="fill" style="width:56%"></div></div><div class="pv">42</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><div class="pn">Partner institutions & departments</div><div class="track"><div class="fill" style="width:53%"></div></div><div class="pv">40</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11a6 6 0 0 1 12 0"/><path d="M4 11h16"/><path d="M12 5v3"/><path d="M8 14a4 4 0 0 0 8 0"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><div class="pn">Sanitation workers</div><div class="track"><div class="fill" style="width:33%"></div></div><div class="pv">25</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><div class="pn">Women SHGs</div><div class="track"><div class="fill" style="width:27%"></div></div><div class="pv">20</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="11" height="8" rx="4"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><div class="pn">Exhibitors</div><div class="track"><div class="fill" style="width:27%"></div></div><div class="pv">20</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/><path d="M7 12l3-3 2 2 4-4"/></svg></div><div class="pn">Speakers & experts</div><div class="track"><div class="fill" style="width:16%"></div></div><div class="pv">12</div></div><div class="pbar"><div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><div class="pn">Media & volunteers</div><div class="track"><div class="fill" style="width:33%"></div></div><div class="pv">25</div></div></div>
         <table class="ptable">
           <thead><tr><th>Group</th><th>Details</th><th>Expected</th></tr></thead>
           <tbody>
-            <tr><td><b>Urban local bodies (FSM)</b></td><td>Representatives of selected urban local bodies working on faecal sludge management</td><td class="n">~110</td></tr>
-            <tr><td><b>Sanitation workers</b></td><td>Frontline sanitation workers, Lucknow Municipal Corporation</td><td class="n">50</td></tr>
-            <tr><td><b>Partner organisations</b></td><td>Organisations working on sanitation, FSM and the NAMASTE scheme</td><td class="n">20–25</td></tr>
-            <tr><td><b>Panellists & experts</b></td><td>Experts for the technical sessions and panel discussions</td><td class="n">50</td></tr>
-            <tr><td><b>Directorate & officials</b></td><td>Officers and staff of the Directorate (SBM-U) and municipal corporation</td><td class="n">50</td></tr>
+            <tr><td><b>Urban local bodies — FSM cities</b></td><td>56 ULBs: 2 from each Nagar Nigam, 1 from each Nagar Palika Parishad / Nagar Panchayat</td><td class="n">72</td></tr>
+            <tr><td><b>District PMUs</b></td><td>District Project Managers, SBM-U, from all 75 districts</td><td class="n">75</td></tr>
+            <tr><td><b>Government officials</b></td><td>Government of India (MoHUA, CPHEEO), Urban Development Department, Directorate and State PMU</td><td class="n">42</td></tr>
+            <tr><td><b>Partner institutions & departments</b></td><td>Knowledge and implementation partners and allied State departments</td><td class="n">40</td></tr>
+            <tr><td><b>Sanitation workers</b></td><td>Sanitation workers to be felicitated</td><td class="n">25</td></tr>
+            <tr><td><b>Women SHGs</b></td><td>Self-help groups that led the public toilet audits</td><td class="n">20</td></tr>
+            <tr><td><b>Exhibitors</b></td><td>Sanitation technology, desludging equipment and mobile toilets</td><td class="n">20</td></tr>
+            <tr><td><b>Speakers & experts</b></td><td>Session chairs, panellists and speakers</td><td class="n">12</td></tr>
+            <tr><td><b>Media & volunteers</b></td><td>Media and event volunteers</td><td class="n">25</td></tr>
+            <tr><td><b>Total</b></td><td>Plus a small reserve for unconfirmed guests</td><td class="n"><b>~350</b></td></tr>
           </tbody>
         </table>
       </div>
@@ -311,14 +366,30 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   </section>
 </div>
 
+<!-- ============ UPDATES ============ -->
+<div class="view" id="v-updates">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Official updates</div>
+      <h2>Updates & best practices</h2>
+      <p class="lead">Official announcements on the campaign and the Conclave, and the best practices of urban local bodies declared under World Toilet Day 2026.</p>
+      <div class="g2">
+        <div><h3 style="font-size:22px;margin-bottom:10px">Latest updates</h3><div class="card"><ul class="tl" id="updList"></ul></div></div>
+        <div><h3 style="font-size:22px;margin-bottom:10px">Best practices</h3><div id="bpList"></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ============ REGISTER ============ -->
 <div class="view" id="v-register">
   <section>
     <div class="wrap">
       <div class="card" style="max-width:780px;margin:0 auto">
         <div style="display:flex;gap:14px;align-items:center;margin-bottom:6px"><div class="ico" style="background:var(--soft);margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></div><div class="eyebrow" style="margin:0">Registration</div></div>
-        <h2>Register for World Toilet Day 2026</h2>
-        <p class="lead" style="margin-bottom:18px">19 November 2026 · UTRI, Lucknow · Fields marked * are required.</p>
+        <h2>Register for the Conclave</h2>
+        <p class="lead" style="margin-bottom:10px">23 November 2026 · <span class="venue">Lucknow</span> · Fields marked * are required.</p>
+        <div class="note" style="margin-bottom:18px">Participation is <b>by invitation only</b>. Please register only if you have received an invitation; your registration ID will be needed at the registration desk.</div>
         <div class="setup" id="setupNotice" hidden>⚙️ This form is not yet connected to the Google Sheet. Add the Web App URL as described in SETUP.txt.</div>
         <form id="regForm" novalidate>
           <div class="row">
@@ -330,7 +401,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
               <select id="category" name="category">
                 <option value="">— Select —</option>
                 <option>Urban local body representative</option>
+                <option>District PMU (DPM)</option>
                 <option>Sanitation worker</option>
+                <option>SHG representative</option>
+                <option>Exhibitor</option>
+                <option>Media</option>
                 <option>Partner organisation / NGO</option>
                 <option>Panellist / expert</option>
                 <option>Directorate / government official</option>
@@ -348,11 +423,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
           </div>
           <div class="field"><label>Sessions of interest</label>
             <div class="checks">
-              <label><input type="checkbox" name="sessions" value="Sanitation panel"> Sanitation</label>
-              <label><input type="checkbox" name="sessions" value="NAMASTE"> NAMASTE</label>
-              <label><input type="checkbox" name="sessions" value="WATSAN & FSM"> WATSAN & FSM</label>
-              <label><input type="checkbox" name="sessions" value="New technology"> New technology</label>
-              <label><input type="checkbox" name="sessions" value="Aspirational toilets"> Aspirational toilets</label>
+              <label><input type="checkbox" name="sessions" value="Public & community toilets"> Public & community toilets</label>
+              <label><input type="checkbox" name="sessions" value="NAMASTE"> NAMASTE & worker safety</label>
+              <label><input type="checkbox" name="sessions" value="FSM"> Faecal sludge management</label>
+              <label><input type="checkbox" name="sessions" value="Exhibition"> Technology exhibition</label>
             </div></div>
           <div class="row">
             <div class="field"><label for="lunch">Will you stay for lunch?</label><select id="lunch" name="lunch"><option>Yes</option><option>No</option></select></div>
@@ -376,7 +450,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   </section>
 </div>
 
-<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · World Toilet Day, 19 November 2026 · UTRI, Lucknow</div></footer>
+<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · UP Toilet & Sanitation Conclave–2026 · 23 November 2026 · Lucknow</div></footer>
 
 <script>
 /* ---------- partners (put logo files in logos/) ---------- */
@@ -396,7 +470,7 @@ document.getElementById('msgGrid').innerHTML=MESSAGES.map((m,k)=>`
 MESSAGES.forEach((m,k)=>{const i=new Image();i.alt='';i.src=m.photo;i.onload=()=>{const a=document.getElementById('av'+k);a.textContent='';a.appendChild(i)}});
 
 /* ---------- tabs (work without relying on URL hash) ---------- */
-const views=['home','messages','agenda','participants','register'];
+const views=['home','campaign','agenda','messages','participants','updates','register'];
 function go(v,push){
   if(!views.includes(v)) v='home';
   views.forEach(x=>document.getElementById('v-'+x).classList.toggle('on',x===v));
@@ -415,12 +489,17 @@ go(start,false);
 window.addEventListener('hashchange',()=>{ try{ go(location.hash.slice(1),false); }catch(_){} });
 document.getElementById('menuBtn').onclick=()=>document.getElementById('tabs').classList.toggle('open');
 
+/* ---------- venue, links, updates ---------- */
+document.querySelectorAll('.venue').forEach(e=>e.textContent=VENUE);
+document.getElementById('formLink').href=FORM_URL; document.getElementById('pptLink').href=PPT_URL;
+document.getElementById('updList').innerHTML=UPDATES.map(u=>`<li><time>${esc(u.date)}</time><div><div class="d" style="margin:0;color:var(--ink)">${esc(u.text)}</div></div></li>`).join('');
+document.getElementById('bpList').innerHTML=BEST_PRACTICES.length?BEST_PRACTICES.map(b=>`<div class="card" style="margin-bottom:14px"><b>${esc(b.title)}</b><div style="color:var(--muted);font-size:14px;margin:2px 0 8px">${esc(b.ulb)}, ${esc(b.district)}</div><div>${esc(b.text)}</div></div>`).join(''):'<div class="card" style="color:var(--muted)">Best practices will be declared here after the campaign (19–23 November 2026). Urban local bodies are requested to keep reporting their activities daily.</div>';
 /* ---------- countdown ---------- */
 const target=new Date(EVENT_START);
 function tick(){const ms=target-new Date(),el=document.getElementById('countdown');
   if(ms<=0){el.textContent='';return}
   const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
-  el.innerHTML='Starts in <b>'+d+'</b> days <b>'+h+'</b> hrs <b>'+m+'</b> min';}
+  el.innerHTML='Conclave starts in <b>'+d+'</b> days <b>'+h+'</b> hrs <b>'+m+'</b> min';}
 tick(); setInterval(tick,30000);
 
 /* ---------- districts ---------- */
