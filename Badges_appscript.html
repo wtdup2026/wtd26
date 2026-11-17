@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WTD 2026 – ID card printing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#0e6a5a;--brand-d:#0a4f43;--ink:#122a26;--muted:#56685f;--line:#e1ebe6}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,"Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);background:#eef3f0}
+/* ---------- control panel (not printed) ---------- */
+.panel{max-width:1000px;margin:24px auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 26px}
+.panel h1{font-family:Fraunces,serif;color:var(--brand-d);margin:0 0 6px;font-size:28px}
+.panel ol{margin:8px 0 16px;padding-left:20px;line-height:1.7}
+.ctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-top:10px}
+.ctrl label{font-size:13px;font-weight:600;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.ctrl input,.ctrl select{font:inherit;padding:8px 10px;border:1px solid #cfdcd6;border-radius:8px}
+button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:10px 20px;background:var(--brand);color:#fff;cursor:pointer}
+button.alt{background:#fff;color:var(--brand);border:1px solid var(--brand)}
+.msg{margin-top:12px;font-size:14px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.legend span{font-size:12px;font-weight:700;color:#fff;padding:4px 10px;border-radius:6px}
+/* ---------- badges: A6 (105 x 148 mm), 4 per A4 ---------- */
+.sheet{width:210mm;height:297mm;margin:0 auto 10mm;background:#fff;display:grid;grid-template-columns:105mm 105mm;grid-template-rows:148.5mm 148.5mm;box-shadow:0 2px 10px rgba(0,0,0,.08);page-break-after:always;break-after:page}
+.badge{position:relative;width:105mm;height:148.5mm;overflow:hidden;display:flex;flex-direction:column;border:.2mm dashed #c9d6d0}
+.top{background:linear-gradient(160deg,#f1f9f5,#dff1e9);padding:9mm 7mm 4mm;text-align:center;border-bottom:1.2mm solid var(--brand)}
+.hole{position:absolute;top:3.5mm;left:50%;transform:translateX(-50%);width:14mm;height:3.2mm;border-radius:2mm;border:.3mm solid #b7c9c1;background:#fff}
+.logos{display:flex;align-items:center;justify-content:center;gap:4mm;height:11mm}
+.logos img{max-height:11mm;max-width:38mm;object-fit:contain}
+.ev{font-family:Fraunces,serif;font-weight:700;color:var(--brand-d);font-size:13.5pt;line-height:1.1;margin-top:2.5mm}
+.sub{font-size:7.6pt;color:var(--muted);margin-top:1mm;font-weight:600;letter-spacing:.2px}
+.mid{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3mm 7mm}
+.nm{font-weight:800;line-height:1.1;color:var(--ink);word-break:break-word}
+.ds{font-size:9.5pt;color:var(--muted);margin-top:2mm;font-weight:600}
+.org{font-size:10pt;margin-top:1mm;font-weight:700;color:var(--brand-d)}
+.qrrow{display:flex;align-items:center;justify-content:center;gap:4mm;margin-top:6mm}
+.qr svg{width:27mm;height:27mm;display:block}
+.rid{font-size:11pt;font-weight:800;letter-spacing:.5px;text-align:left}
+.rid small{display:block;font-size:6.5pt;font-weight:600;color:var(--muted);letter-spacing:.3px}
+.cat{color:#fff;text-align:center;font-weight:800;letter-spacing:2px;font-size:13pt;padding:3.5mm 2mm;text-transform:uppercase}
+.blank .line{border-bottom:.3mm solid #9fb3aa;width:80mm;height:9mm}
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  .panel{display:none}
+  .sheet{margin:0;box-shadow:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="panel">
+  <h1>ID cards – World Toilet Day 2026</h1>
+  <div class="msg" style="margin:0 0 6px">Click <b>Print</b>. In the print window: Paper <b>A4</b>, Margins <b>None</b>, Scale <b>100%</b>, tick <b>Background graphics</b>. Cut along dashed lines (4 cards per A4).</div>
+  <div class="ctrl" id="ctrls">
+    <label>Category<select id="fcat"><option value="">All categories</option></select></label>
+    <label>Search name / ID (several: separate with commas)<input id="q" placeholder="e.g. WTD26-0003, WTD26-0007, 0012" style="width:300px"></label>
+    <label>Blank cards (walk-ins)<input id="blank" type="number" min="0" max="200" value="0" style="width:110px"></label>
+    <button id="print">Print</button>
+  </div>
+  <div class="legend" id="legend"></div>
+  <div class="msg" id="msg"></div>
+</div>
+<div id="out"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script>
+// Category → card label and colour (matches the registration form options)
+const CATS=[
+  ["Directorate / government official","OFFICIAL","#0e6a5a"],
+  ["Urban local body representative","ULB DELEGATE","#1f5fa8"],
+  ["District PMU (DPM)","DISTRICT PMU","#0f7c8c"],
+  ["Sanitation worker","SANITATION CHAMPION","#d0612a"],
+  ["SHG representative","SHG","#c2457a"],
+  ["Exhibitor","EXHIBITOR","#7a6a1f"],
+  ["Media","MEDIA","#333333"],
+  ["Partner organisation / NGO","PARTNER","#6b4fa0"],
+  ["Panellist / expert","SPEAKER","#b3262e"],
+  ["Other","PARTICIPANT","#4f5b57"]
+];
+const catOf=c=>CATS.find(x=>x[0].toLowerCase()===String(c||'').trim().toLowerCase())||CATS[CATS.length-1];
+const LOGOS=["https://wtdup2026.github.io/logos/organiser.png"];           // add more, e.g. "logos/utri.png"
+const EVENT_LINE="23 November 2026 · Lucknow";
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let rows=<?!= data ?>;
+const SINGLE='<?= single ?>'==='yes';
+
+CATS.forEach(([v,l,c])=>{$('fcat').insertAdjacentHTML('beforeend',`<option value="${esc(v)}">${esc(l)} – ${esc(v)}</option>`);
+  $('legend').insertAdjacentHTML('beforeend',`<span style="background:${c}">${l}</span>`)});
+
+function parseCSV(t){const out=[];let r=[],f='',q=false;t=t.replace(/^﻿/,'');
+  for(let i=0;i<t.length;i++){const ch=t[i];
+    if(q){if(ch=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=ch}
+    else if(ch=='"')q=true;else if(ch==','){r.push(f);f=''}
+    else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(f);f='';if(r.some(x=>x!==''))out.push(r);r=[]}
+    else f+=ch}
+  if(f!==''||r.length){r.push(f);if(r.some(x=>x!==''))out.push(r)}return out}
+
+function toObjs(a){const h=a[0].map(x=>x.trim().toLowerCase());
+  const col=(...names)=>{for(const n of names){const i=h.findIndex(x=>x.startsWith(n));if(i>=0)return i}return -1};
+  const ix={id:col('registration id','id'),name:col('name'),des:col('designation'),cat:col('category'),org:col('organisation','organization'),dist:col('district'),mob:col('mobile')};
+  return a.slice(1).map(r=>({id:r[ix.id]||'',name:r[ix.name]||'',des:r[ix.des]||'',cat:r[ix.cat]||'',org:r[ix.org]||'',dist:r[ix.dist]||'',mob:r[ix.mob]||''})).filter(o=>o.name||o.id)}
+
+function qrSVG(text){const q=qrcode(0,'M');q.addData(text);q.make();return q.createSvgTag({cellSize:4,margin:0,scalable:true})}
+
+function nameSize(n){const L=n.length;return L<=14?'24pt':L<=20?'20pt':L<=28?'16.5pt':'14pt'}
+
+function badge(o){
+  const [,label,color]=catOf(o.cat);
+  const logos=LOGOS.map(s=>`<img src="${s}" alt="" onerror="this.remove()">`).join('');
+  const head=`<div class="hole"></div><div class="top"><div class="logos">${logos}</div><div class="ev">UP Toilet & Sanitation Conclave–2026</div><div class="sub">${esc(EVENT_LINE)}</div></div>`;
+  if(o.blank) return `<div class="badge blank">${head}<div class="mid"><div class="line"></div><div class="ds" style="margin-top:1mm">Name</div><div class="line"></div><div class="ds" style="margin-top:1mm">Designation / Organisation</div></div><div class="cat" style="background:#4f5b57">PARTICIPANT</div></div>`;
+  const where=[o.org,o.dist].filter(Boolean).join(', ');
+  return `<div class="badge">${head}<div class="mid">
+    <div class="nm" style="font-size:${nameSize(o.name)}">${esc(o.name)}</div>
+    ${o.des?`<div class="ds">${esc(o.des)}</div>`:''}
+    ${where?`<div class="org">${esc(where)}</div>`:''}
+    <div class="qrrow"><div class="qr">${qrSVG(o.id||o.name)}</div><div class="rid"><small>REGISTRATION ID</small>${esc(o.id)}</div></div>
+  </div><div class="cat" style="background:${color}">${label}</div></div>`}
+
+function render(){
+  const fc=$('fcat').value, q=$('q').value.trim().toLowerCase();
+  const terms=q.split(/[,;\n]+/).map(x=>x.trim()).filter(Boolean);
+  let list=rows.filter(o=>(!fc||catOf(o.cat)[0]===fc)&&(!terms.length||terms.some(t=>[o.name,o.id,o.mob].join(' ').toLowerCase().includes(t))));
+  const nb=Math.max(0,Math.min(200,+$('blank').value||0));
+  list=list.concat(Array.from({length:nb},()=>({blank:true})));
+  let html='';for(let i=0;i<list.length;i+=4)html+='<div class="sheet">'+list.slice(i,i+4).map(badge).join('')+'</div>';
+  $('out').innerHTML=html;
+  $('msg').textContent=`${list.length} card(s) on ${Math.ceil(list.length/4)} A4 page(s).`;
+}
+['fcat','q','blank'].forEach(id=>$(id).addEventListener('input',render));
+$('print').addEventListener('click',()=>{if(!$('out').innerHTML.trim()){$('msg').textContent='Nothing to print.';return}window.print()});
+if(SINGLE)document.getElementById('ctrls').querySelectorAll('label').forEach(l=>l.style.display='none');
+render();
+if(!rows.length)$('msg').textContent='No registration found for this link.';
+</script>
+</body>
+</html>
