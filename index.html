@@ -364,7 +364,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
           </tbody>
         </table>
       </div>
-      <div class="eyebrow" style="margin-top:40px">Partners (Proposed)</div>
+      <div class="eyebrow" style="margin-top:40px">Partners</div>
       <h2 style="font-size:28px;margin-bottom:18px">Knowledge & implementation partners</h2>
       <div class="logos" id="logos"></div>
     </div>
@@ -432,6 +432,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
               <label><input type="checkbox" name="sessions" value="FSM"> Session 1: Faecal sludge management</label>
               <label><input type="checkbox" name="sessions" value="Safe toilets"> Session 2: Safe toilets, equal futures</label>
             </div></div>
+          <div class="row">
+            <div class="field"><label for="accommodation">Accommodation required? <span class="req">*</span></label><select id="accommodation" name="accommodation"><option value="">— Select —</option><option>Yes</option><option>No</option></select><div class="err">Please select Yes or No</div></div>
+            <div class="field" id="travelField" hidden><label for="travel">Travel assistance required? <span class="req">*</span></label><select id="travel" name="travel"><option value="">— Select —</option><option>Yes</option><option>No</option></select><div class="err">Please select Yes or No</div></div>
+          </div>
           <div class="row">
             <div class="field"><label for="lunch">Will you stay for refreshments?</label><select id="lunch" name="lunch"><option>Yes</option><option>No</option></select></div>
             <div class="field"><label for="access">Accessibility needs</label><input id="access" name="access" placeholder="Optional"></div>
@@ -514,9 +518,13 @@ const configured=SCRIPT_URL.startsWith('https://script.google.com/');
 if(!configured) document.getElementById('setupNotice').hidden=false;
 const form=document.getElementById('regForm'),st=document.getElementById('status'),btn=document.getElementById('submitBtn');
 form.mobile.addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,10)});
+const TRAVEL_CATS=['Panellist / expert','Directorate / government official'];
+const needTravel=()=>TRAVEL_CATS.includes(form.category.value);
+form.category.addEventListener('change',()=>{const f=document.getElementById('travelField');f.hidden=!needTravel();if(f.hidden)form.travel.value='';});
 function validate(){let ok=true;form.querySelectorAll('.field').forEach(f=>f.classList.remove('bad'));
   const bad=id=>{document.getElementById(id).closest('.field').classList.add('bad');ok=false};
-  ['name','designation','category','organisation','district'].forEach(id=>{if(!form[id].value.trim())bad(id)});
+  ['name','designation','category','organisation','district','accommodation'].forEach(id=>{if(!form[id].value.trim())bad(id)});
+  if(needTravel()&&!form.travel.value)bad('travel');
   if(!/^[6-9]\d{9}$/.test(form.mobile.value.trim()))bad('mobile');
   const em=form.email.value.trim(); if(em&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))bad('email'); return ok;}
 form.addEventListener('submit',async e=>{e.preventDefault();st.textContent='';
@@ -524,7 +532,7 @@ form.addEventListener('submit',async e=>{e.preventDefault();st.textContent='';
   if(form.website.value)return;
   if(!configured){st.textContent='Registration is not connected yet (see SETUP.txt).';return}
   const fd=new URLSearchParams();
-  ['name','designation','category','organisation','district','mobile','email','gender','lunch','access','remarks'].forEach(k=>fd.append(k,form[k].value.trim()));
+  ['name','designation','category','organisation','district','mobile','email','gender','lunch','access','remarks','accommodation','travel'].forEach(k=>fd.append(k,form[k].value.trim()));
   fd.append('sessions',[...form.querySelectorAll('input[name=sessions]:checked')].map(c=>c.value).join(', '));
   btn.disabled=true;btn.textContent='Submitting…';
   const ac=new AbortController();const tm=setTimeout(()=>ac.abort(),45000);
@@ -532,7 +540,7 @@ form.addEventListener('submit',async e=>{e.preventDefault();st.textContent='';
     document.getElementById('rid').textContent=j.id;document.getElementById('okTitle').textContent=j.duplicate?'Already registered':'You\'re registered';document.getElementById('okNote').textContent=j.duplicate?'This mobile number is already registered. Your existing registration ID is':'Your registration ID';form.style.display='none';document.getElementById('success').style.display='block';}
   catch(err){st.textContent=(err&&err.name==='AbortError')?'The server is taking too long. Please wait a minute and try again.':'Registration could not be submitted. Please try again.'+(err&&err.message&&err.message!=='0'?' ('+err.message+')':'');console.error(err)}
   finally{clearTimeout(tm);btn.disabled=false;btn.textContent='Submit registration'}});
-document.getElementById('again').addEventListener('click',()=>{form.reset();form.style.display='block';document.getElementById('success').style.display='none'});
+document.getElementById('again').addEventListener('click',()=>{form.reset();document.getElementById('travelField').hidden=true;form.style.display='block';document.getElementById('success').style.display='none'});
 </script>
 </body>
 </html>
