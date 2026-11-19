@@ -77,9 +77,11 @@ a.fact:hover{border-color:var(--brand)}
 .count{margin-top:22px;font-size:14.5px;color:var(--muted)}
 .sponsors{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:20px}
 .sponsors .sl{font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.sponsors .sp{display:flex;align-items:center;height:64px;font-weight:700;font-size:14px;color:var(--brand-d);text-decoration:none}
+.sponsors .sp{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:17px;color:var(--brand-d);text-decoration:none;white-space:nowrap}
+.sponsors .dot{color:var(--accent);font-weight:700}
+@media (max-width:480px){.sponsors .dot{display:none}.sponsors{row-gap:4px}}
 .sponsors .sp img{height:62px;width:auto;max-width:190px;object-fit:contain;display:block}
-.sponsors{gap:18px}
+.sponsors{gap:10px}
 .count b{color:var(--brand)}
 .count b{font-variant-numeric:tabular-nums}
 /* sections */
@@ -211,8 +213,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <a class="btn" href="#campaign">Campaign 19–23 Nov →</a><a class="btn alt" href="#agenda">Conclave agenda</a>
       <div class="count" id="countdown"></div>
       <div class="sponsors"><span class="sl">Supported by</span>
-        <a class="sp" href="https://www.washinstitute.org/" target="_blank" rel="noopener" title="WASH Institute"><img src="logos/washi.png" alt="WASH Institute" onerror="this.replaceWith('WASH Institute')"></a>
-        <a class="sp" href="https://www.sulabhinternational.org/" target="_blank" rel="noopener" title="Sulabh International"><img src="logos/sulabh.png" alt="Sulabh International" onerror="this.replaceWith('Sulabh International')"></a>
+        <a class="sp" href="https://www.washinstitute.org/" target="_blank" rel="noopener" title="WASH Institute">WASH Institute (WASHi)</a><span class="dot">·</span>
+        <a class="sp" href="https://www.sulabhinternational.org/" target="_blank" rel="noopener" title="Sulabh International">Sulabh International</a>
       </div>
     </div><div class="heroArt" aria-hidden="true">
 <img src="logos/hero.png" alt="Public toilet, faecal sludge treatment plant, desludging vehicle and a sanitation worker"></div>
