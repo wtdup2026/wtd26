@@ -179,6 +179,20 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 .pbar .fill{height:100%;background:var(--brand);border-radius:999px}
 .pbar .pv{font-weight:700;color:var(--brand);text-align:right;font-variant-numeric:tabular-nums}
 .wave{display:block;width:100%;height:40px;margin-top:-1px}
+.xgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.xcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.xcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.07)}
+.ximg{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#0e6a5a,#2f8f7a)}
+.ximg img{width:100%;height:100%;object-fit:cover;display:block}
+.ximg span{display:none}
+.ximg.none{display:grid;place-items:center;padding:12px;text-align:center}
+.ximg.none span{display:block;font-family:Fraunces,Georgia,serif;font-size:21px;font-weight:700;color:#fff}
+.xb{padding:14px 16px 16px}
+.xb b{display:block;font-size:16.5px}
+.xb small{display:block;color:var(--brand);font-weight:600;font-size:13px;margin:2px 0 6px}
+.xb p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.xt td,.xt th{white-space:nowrap}
+.xt td a{text-decoration:none}
 .view{display:none}
 .view.on{display:block}
 </style>
@@ -195,6 +209,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <a href="#messages">Messages</a>
       <a href="#participants">Participants</a>
       <a href="#updates">Updates</a>
+      <a href="#explore">Explore LKO</a>
       <a href="#register" class="reg">Register</a>
     </nav>
   </div>
@@ -332,7 +347,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
           <li><time>01:30 – 02:00</time><div><div class="t">Address by the Hon'ble Minister, Urban Development</div></div></li>
           <li><time>02:00 – 02:10</time><div><div class="t">Vote of thanks by the Additional Director</div></div></li>
           <li><time>02:10</time><div><div class="t">Group photograph with dignitaries and Safai Mitras</div></div></li>
-          <li><time>02:10</time><div><div class="t">Lunch and close of the programme</div></div></li>
+          <li><time>02:10</time><div><div class="t">Refreshments and close of the programme</div></div></li>
         </ul>
       </div>
     </div>
@@ -381,6 +396,66 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <div class="g2">
         <div><h3 style="font-size:22px;margin-bottom:10px">Latest updates</h3><div class="card"><ul class="tl" id="updList"></ul></div></div>
         <div><h3 style="font-size:22px;margin-bottom:10px">Best practices</h3><div id="bpList"></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ EXPLORE LUCKNOW ============ -->
+<div class="view" id="v-explore">
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Explore LKO</div>
+      <h2>Your stay in Lucknow</h2>
+      <p class="lead">Hotels near the venue, and the sights, food and markets of the City of Nawabs for your free time.</p>
+
+      <h3 style="font-size:22px;margin:8px 0 10px">Places to stay near the venue</h3>
+      <div class="card" style="overflow-x:auto;padding:10px 14px">
+        <table class="ptable xt">
+          <thead><tr><th>Hotel</th><th>Rating · Class</th><th>Distance from Mercure</th><th>Tariff*</th><th>Map</th></tr></thead>
+          <tbody>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11m5ykkfg7" target="_blank" rel="noopener"><b>Mercure Lucknow Gomti Nagar</b></a></td><td>4.4 (888) · 4-star</td><td>Venue · next to Phoenix Palassio</td><td class="n">₹7,763</td><td><a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11fxqtn9bx" target="_blank" rel="noopener"><b>Comfort Hotel Vista</b></a></td><td>4.6 (5,139) · 4-star</td><td>~1.7 km · 3 min drive</td><td class="n">₹4,845</td><td><a href="https://www.google.com/maps/search/?api=1&query=Comfort+Hotel+Vista+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11l6wdwvcb" target="_blank" rel="noopener"><b>Hotel Silver Bliss</b></a></td><td>4.6 (350) · 3-star</td><td>~1.7 km · 4–6 min drive</td><td class="n">₹1,876</td><td><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Silver+Bliss+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11w5br2728" target="_blank" rel="noopener"><b>Celestial Manor</b></a></td><td>4.6 (661) · Boutique</td><td>~2.0 km · 4–5 min drive</td><td class="n">₹3,835</td><td><a href="https://www.google.com/maps/search/?api=1&query=Celestial+Manor+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11sp94y_q_" target="_blank" rel="noopener"><b>Hotel The Nawabs Inn</b></a></td><td>4.3 (344) · 3-star</td><td>~3.5 km · 6–8 min drive</td><td class="n">₹6,265</td><td><a href="https://www.google.com/maps/search/?api=1&query=Hotel+The+Nawabs+Inn+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11g69yprcw" target="_blank" rel="noopener"><b>Novotel Lucknow Gomti Nagar</b></a></td><td>4.6 (10,925) · 5-star</td><td>~8.5 km · 16 min drive</td><td class="n">₹7,868</td><td><a href="https://www.google.com/maps/search/?api=1&query=Novotel+Lucknow+Gomti+Nagar" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11bzn9dqfw" target="_blank" rel="noopener"><b>Fairfield by Marriott Lucknow</b></a></td><td>4.3 (9,900) · 4-star</td><td>~9.5 km · 18 min drive</td><td class="n">₹7,035</td><td><a href="https://www.google.com/maps/search/?api=1&query=Fairfield+by+Marriott+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+<tr><td><a href="https://www.google.com/search?kgmid=%2Fg%2F11g6590f33" target="_blank" rel="noopener"><b>Hilton Garden Inn Lucknow</b></a></td><td>4.4 (9,877) · 4-star</td><td>~9.5 km · 18 min drive</td><td class="n">₹9,285</td><td><a href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Lucknow" target="_blank" rel="noopener">Map ↗</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src">*Indicative tariff per night for 22–23 November 2026, as seen online; actual rates vary — please confirm with the hotel. Ratings are Google reviews. Invited guests whose stay is arranged by the organisers need not book.</p>
+
+      <h3 style="font-size:22px;margin:34px 0 10px">Places to visit</h3>
+      <div class="xgrid">
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Bara+Imambara+%26+Bhool+Bhulaiya+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/bara-imambara.jpg" alt="Bara Imambara & Bhool Bhulaiya" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Bara Imambara & Bhool Bhulaiya</span></div><div class="xb"><b>Bara Imambara & Bhool Bhulaiya</b><small>📍 Old Lucknow</small><p>Grand 18th-century Nawabi complex with the famous maze of passages on its upper floor. Hire an authorised guide at the gate.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Rumi+Darwaza+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/rumi-darwaza.jpg" alt="Rumi Darwaza" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Rumi Darwaza</span></div><div class="xb"><b>Rumi Darwaza</b><small>📍 Old Lucknow</small><p>The 60-foot ornamental gateway that has become the symbol of Lucknow, a short walk from Bara Imambara.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Chota+Imambara+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/chota-imambara.jpg" alt="Chota Imambara" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Chota Imambara</span></div><div class="xb"><b>Chota Imambara</b><small>📍 Hussainabad, Old Lucknow</small><p>Ornate monument known for its chandeliers and gilded dome; best seen together with Bara Imambara and the clock tower.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=The+Residency+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/residency.jpg" alt="The Residency" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>The Residency</span></div><div class="xb"><b>The Residency</b><small>📍 Near Kaiserbagh</small><p>Ruins of the British Residency, preserved as they stood after the siege of 1857, with a small museum.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Ambedkar+Memorial+Park+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/ambedkar-park.jpg" alt="Ambedkar Memorial Park" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Ambedkar Memorial Park</span></div><div class="xb"><b>Ambedkar Memorial Park</b><small>📍 Gomti Nagar</small><p>Vast sandstone memorial park close to the venue; especially striking when lit up in the evening.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Janeshwar+Mishra+Park+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/janeshwar-park.jpg" alt="Janeshwar Mishra Park" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Janeshwar Mishra Park</span></div><div class="xb"><b>Janeshwar Mishra Park</b><small>📍 Gomti Nagar</small><p>Very large green park with lakes and walking tracks, ideal for an early-morning walk near the venue.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Hazratganj+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/hazratganj.jpg" alt="Hazratganj" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Hazratganj</span></div><div class="xb"><b>Hazratganj</b><small>📍 City centre</small><p>Lucknow's heritage shopping boulevard — evening stroll, cafés, bookshops and the famous 'Ganj-ing'.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Gomti+Riverfront+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/gomti-riverfront.jpg" alt="Gomti Riverfront" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Gomti Riverfront</span></div><div class="xb"><b>Gomti Riverfront</b><small>📍 Along the Gomti</small><p>Landscaped riverside promenade for a relaxed evening walk.</p></div></a>
+      </div>
+      <p class="src">Old Lucknow (Imambaras, Rumi Darwaza, Chowk) is roughly 45–60 minutes' drive from Gomti Nagar Extension, depending on traffic. Monuments may be closed on certain days; check timings before you go.</p>
+
+      <h3 style="font-size:22px;margin:34px 0 10px">Lucknowi food to try</h3>
+      <div class="xgrid">
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Tunday+Kababi+Aminabad+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/galouti-kebab.jpg" alt="Galouti kebab" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Galouti kebab</span></div><div class="xb"><b>Galouti kebab</b><small>📍 Tunday Kababi, Aminabad / Chowk</small><p>Melt-in-the-mouth minced-meat kebabs with paratha — Lucknow's signature dish.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Idrees+Biryani+Chowk+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/awadhi-biryani.jpg" alt="Awadhi biryani" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Awadhi biryani</span></div><div class="xb"><b>Awadhi biryani</b><small>📍 Idrees Biryani, Chowk</small><p>Fragrant dum-cooked biryani in the Lucknowi style.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Rahim%27s+Nihari+Kulcha+Chowk+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/nihari-kulcha.jpg" alt="Nihari–kulcha" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Nihari–kulcha</span></div><div class="xb"><b>Nihari–kulcha</b><small>📍 Rahim's, Chowk</small><p>Slow-cooked nihari with soft kulcha, a classic old-city breakfast.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Royal+Cafe+Hazratganj+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/basket-chaat.jpg" alt="Basket chaat" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Basket chaat</span></div><div class="xb"><b>Basket chaat</b><small>📍 Royal Café, Hazratganj</small><p>Crisp potato basket filled with chaat — a Lucknow favourite for vegetarians.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Makhan+Malai+Chowk+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/makhan-malai.jpg" alt="Makhan malai" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Makhan malai</span></div><div class="xb"><b>Makhan malai</b><small>📍 Chowk lanes, early mornings</small><p>Airy saffron milk froth sold only in winter (about November–February) — you are here in season.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Prakash+Kulfi+Aminabad+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/kulfi.jpg" alt="Kulfi–falooda" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Kulfi–falooda</span></div><div class="xb"><b>Kulfi–falooda</b><small>📍 Prakash Kulfi, Aminabad</small><p>Traditional kulfi with falooda, open till late evening.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Sharma+Tea+Lalbagh+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/bun-makhan.jpg" alt="Tea & bun-makhan" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Tea & bun-makhan</span></div><div class="xb"><b>Tea & bun-makhan</b><small>📍 Sharma Tea, Lalbagh</small><p>Morning ritual: milky tea with a buttered bun.</p></div></a>
+      </div>
+
+      <h3 style="font-size:22px;margin:34px 0 10px">Markets & shopping</h3>
+      <div class="xgrid">
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Chikankari+shops+Chowk+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/chikankari.jpg" alt="Chikankari" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Chikankari</span></div><div class="xb"><b>Chikankari</b><small>📍 Chowk & Aminabad</small><p>Lucknow's famous hand embroidery — kurtas, sarees, dupattas. Compare prices across a few shops.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Phoenix+Palassio+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/phoenix-palassio.jpg" alt="Phoenix Palassio" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Phoenix Palassio</span></div><div class="xb"><b>Phoenix Palassio</b><small>📍 Next to the venue</small><p>Large mall adjacent to Hotel Mercure for quick shopping, food court and essentials.</p></div></a>
+<a class="xcard" href="https://www.google.com/maps/search/?api=1&query=Aminabad+market+Lucknow" target="_blank" rel="noopener"><div class="ximg"><img src="logos/explore/aminabad.jpg" alt="Aminabad market" loading="lazy" onerror="this.parentNode.classList.add('none');this.remove()"><span>Aminabad market</span></div><div class="xb"><b>Aminabad market</b><small>📍 Old city</small><p>Busy bazaar for chikan, footwear, sweets and Prakash Kulfi.</p></div></a>
       </div>
     </div>
   </section>
@@ -437,7 +512,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
             <div class="field" id="travelField" hidden><label for="travel">Travel assistance required? <span class="req">*</span></label><select id="travel" name="travel"><option value="">— Select —</option><option>Yes</option><option>No</option></select><div class="err">Please select Yes or No</div></div>
           </div>
           <div class="row">
-            <div class="field"><label for="lunch">Will you stay for Lunch?</label><select id="lunch" name="lunch"><option>Yes</option><option>No</option></select></div>
+            <div class="field"><label for="lunch">Will you stay for refreshments?</label><select id="lunch" name="lunch"><option>Yes</option><option>No</option></select></div>
             <div class="field"><label for="access">Accessibility needs</label><input id="access" name="access" placeholder="Optional"></div>
           </div>
           <div class="field"><label for="remarks">Remarks / suggestions</label><textarea id="remarks" name="remarks" rows="3"></textarea></div>
@@ -478,7 +553,7 @@ document.getElementById('msgGrid').innerHTML=MESSAGES.map((m,k)=>`
 MESSAGES.forEach((m,k)=>{const i=new Image();i.alt='';i.src=m.photo;i.onload=()=>{const a=document.getElementById('av'+k);a.textContent='';a.appendChild(i)}});
 
 /* ---------- tabs (work without relying on URL hash) ---------- */
-const views=['home','campaign','agenda','messages','participants','updates','register'];
+const views=['home','campaign','agenda','messages','participants','updates','explore','register'];
 function go(v,push){
   if(!views.includes(v)) v='home';
   views.forEach(x=>document.getElementById('v-'+x).classList.toggle('on',x===v));
