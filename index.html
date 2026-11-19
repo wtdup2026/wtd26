@@ -69,13 +69,17 @@ nav.tabs a.reg{background:var(--brand);color:#fff}
 .fact b{display:block;font-size:19px}
 .fact b{color:var(--brand-d)}
 .fact span{font-size:13.5px;color:var(--muted)}
+a.fact{text-decoration:none;color:inherit}
+.fact em{display:block;font-style:normal;font-size:13.5px;font-weight:700;color:var(--brand);margin-top:4px}
+a.fact:hover{border-color:var(--brand)}
 .btn{display:inline-block;background:var(--accent);color:#1f1603;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer}
 .btn.alt{background:#fff;color:var(--brand);border:1px solid var(--brand);margin-left:8px}
 .count{margin-top:22px;font-size:14.5px;color:var(--muted)}
 .sponsors{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:20px}
 .sponsors .sl{font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.sponsors .sp{display:flex;align-items:center;height:64px;padding:6px 14px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:14px;color:var(--brand-d);text-decoration:none}
-.sponsors .sp img{height:50px;width:auto;max-width:150px;object-fit:contain;display:block}
+.sponsors .sp{display:flex;align-items:center;height:64px;font-weight:700;font-size:14px;color:var(--brand-d);text-decoration:none}
+.sponsors .sp img{height:62px;width:auto;max-width:190px;object-fit:contain;display:block}
+.sponsors{gap:18px}
 .count b{color:var(--brand)}
 .count b{font-variant-numeric:tabular-nums}
 /* sections */
@@ -202,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <div class="facts">
         <div class="fact"><b>23 November 2026</b><span>Monday · 9:30 AM onwards</span></div>
         <div class="fact"><b>19–23 November</b><span>Campaign in all ULBs</span></div>
-        <div class="fact"><b>Hotel Mercure</b><span>Auditorium, First Floor · Sector-7, Gomti Nagar Extension, Lucknow</span></div>
+        <a class="fact maplink" href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener"><b>Hotel Mercure</b><span>Auditorium, First Floor · Sector-7, Gomti Nagar Extension, Lucknow</span><em>📍 View on Google Maps →</em></a>
       </div>
       <a class="btn" href="#campaign">Campaign 19–23 Nov →</a><a class="btn alt" href="#agenda">Conclave agenda</a>
       <div class="count" id="countdown"></div>
@@ -301,7 +305,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">Programme</div>
       <h2>Agenda</h2>
-      <p class="lead">Monday, 23 November 2026 · <span class="venue">Lucknow</span></p>
+      <p class="lead">Monday, 23 November 2026 · <span class="venue">Lucknow</span> · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Map</a></p>
       <div class="note">Timings may be adjusted to the schedule of the Hon'ble Minister.</div>
       <div class="card">
         <ul class="tl">
@@ -385,7 +389,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <div class="card" style="max-width:780px;margin:0 auto">
         <div style="display:flex;gap:14px;align-items:center;margin-bottom:6px"><div class="ico" style="background:var(--soft);margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></div><div class="eyebrow" style="margin:0">Registration</div></div>
         <h2>Register for the Conclave</h2>
-        <p class="lead" style="margin-bottom:10px">23 November 2026 · <span class="venue">Lucknow</span> · Fields marked * are required.</p>
+        <p class="lead" style="margin-bottom:10px">23 November 2026 · <span class="venue">Lucknow</span> (<a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">map</a>) · Fields marked * are required.</p>
         <div class="note" style="margin-bottom:18px">Participation is <b>by invitation only</b>. Please register <b>by 21 November 2026</b>, only if you have received an invitation; your registration ID will be needed at the registration desk.<br>For assistance: <b>Dr. Abhay Kumar Verma</b>, <a href="tel:+919456100181">9456100181</a> · <b>Mrs. Arti Tiwari</b>, <a href="tel:+918299785684">+91 82997 85684</a></div>
         <div class="setup" id="setupNotice" hidden>⚙️ This form is not yet connected to the Google Sheet. Add the Web App URL as described in SETUP.txt.</div>
         <form id="regForm" novalidate>
@@ -446,7 +450,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   </section>
 </div>
 
-<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · UP Sanitation Conclave 2026 · 23 November 2026 · Hotel Mercure, Gomti Nagar Extension, Lucknow</div></footer>
+<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · UP Sanitation Conclave 2026 · 23 November 2026 · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Hotel Mercure, Gomti Nagar Extension, Lucknow</a></div></footer>
 
 <script>
 /* ---------- partners (put logo files in logos/) ---------- */
