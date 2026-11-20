@@ -20,10 +20,11 @@ const MESSAGES = [
     text:"I warmly welcome all participants — our urban local bodies, sanitation workers, partner organisations and experts. Today's sessions bring together field experience and new ideas, from aspirational and mobile toilets to faecal sludge management and new technologies. I encourage every participant to take back at least one practical idea and put it into action in their city in the coming months." }
 ];
 // 3) Event facts
-const EVENT_START = "2026-11-23T09:30:00+05:30";
+const EVENT_START = "";   // conclave postponed – set the new date/time here when announced, e.g. "2026-12-15T09:30:00+05:30"
 const VENUE = "Auditorium, First Floor, Hotel Mercure, Sector-7, Gomti Nagar Extension, Lucknow";
 // 5) Updates (newest first). Add a line here to publish an update.
 const UPDATES = [
+  { date:"20 Nov 2026", text:"The UP Sanitation Conclave 2026, scheduled on 23 November 2026, has been postponed due to unavoidable circumstances. The new date will be announced on this website shortly." },
   { date:"19 Nov 2026", text:"Invitations issued for the UP Sanitation Conclave 2026 on 23 November at Hotel Mercure, Lucknow. Invited participants are requested to register on this website by 21 November 2026." },
   { date:"17 Nov 2026", text:"Campaign letter issued to all urban local bodies for the five-day State-wide sanitation campaign (19–23 November)." },
   { date:"16 Nov 2026", text:"Ministry of Housing and Urban Affairs, Government of India, issued guidance for World Toilet Day activities focused on community and public toilets and the FACES parameters." }
@@ -195,6 +196,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 .xb p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
 .xt td,.xt th{white-space:nowrap}
 .xt td a{text-decoration:none}
+.pnotice{background:#fff4e5;border-bottom:1px solid #f3d3a4;color:#7a4b00;font-size:14.5px;padding:10px 0;text-align:center}
+.pnotice b{color:#a35a00}
+.pnotice .pin{max-width:1100px;margin:0 auto;padding:0 20px;line-height:1.5}
+.fact.post b{color:#b3261e}
 .view{display:none}
 .view.on{display:block}
 </style>
@@ -216,6 +221,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     </nav>
   </div>
 </header>
+<div class="pnotice" role="status"><div class="pin">⚠️ <b>Postponed:</b> The UP Sanitation Conclave 2026, scheduled on 23 November 2026, has been postponed due to unavoidable circumstances. The new date will be announced here shortly.</div></div>
 
 <!-- ============ HOME / ABOUT ============ -->
 <div class="view" id="v-home">
@@ -223,9 +229,9 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap heroGrid"><div>
       <span class="pill">World Toilet Day 2026 · Uttar Pradesh</span>
       <h1>UP Sanitation Conclave 2026</h1>
-      <p class="theme">The closing event of the <b>five-day State-wide sanitation campaign (19–23 November)</b> — public and community toilets, NAMASTE, faecal sludge management and new technologies.</p>
+      <p class="theme">Planned as the closing event of the <b>five-day State-wide sanitation campaign (19–23 November)</b> — public and community toilets, NAMASTE, faecal sludge management and new technologies.</p>
       <div class="facts">
-        <div class="fact"><b>23 November 2026</b><span>Monday · 9:30 AM onwards</span></div>
+        <div class="fact post"><b>Postponed</b><span>New date to be announced</span></div>
         <div class="fact"><b>19–23 November</b><span>Campaign in all ULBs</span></div>
         <a class="fact maplink" href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener"><b>Hotel Mercure</b><span>Auditorium, First Floor · Sector-7, Gomti Nagar Extension, Lucknow</span><em>📍 View on Google Maps →</em></a>
       </div>
@@ -284,7 +290,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   <section style="padding-top:0">
     <div class="wrap">
       <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-        <div><h3 style="font-size:24px">Conclave on 23 November · by invitation</h3><p style="margin:4px 0 0;color:var(--muted)">About 350 invited participants — urban local bodies, district PMUs, Government of India and State officials, experts, partner institutions and sanitation workers.</p></div>
+        <div><h3 style="font-size:24px">Conclave (postponed – new date soon) · by invitation</h3><p style="margin:4px 0 0;color:var(--muted)">About 350 invited participants — urban local bodies, district PMUs, Government of India and State officials, experts, partner institutions and sanitation workers.</p></div>
         <a class="btn" href="#register" style="background:var(--brand);color:#fff">Invited? Register →</a>
       </div>
     </div>
@@ -301,7 +307,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <div class="chips" style="margin-bottom:34px"><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">F</div><b>Functional</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">A</div><b>Accessible</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">C</div><b>Clean</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">E</div><b>Eco-friendly</b></div><div class="chip"><div class="ico" style="font-weight:800;font-size:20px">S</div><b>Safe</b></div></div>
       <div>
           <h3 style="font-size:22px;margin-bottom:10px">Day-wise plan (suggestive)</h3>
-          <div class="card"><ul class="tl"><li><time>Day 1<br><small>Thu, 19 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></span>Inauguration of new community, public and aspirational toilets; campaign launch on World Toilet Day</div></div></li><li><time>Day 2<br><small>Fri, 20 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Public audit of CTs/PTs on the FACES parameters, led by women SHGs and community groups</div></div></li><li><time>Day 3<br><small>Sat, 21 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span>Repair, refurbishment and upgrading; water, light, handwashing, menstrual hygiene and accessibility</div></div></li><li><time>Day 4<br><small>Sun, 22 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3l-7 7"/><path d="M10 9l5 5-3 7-9-9z"/></svg></span>Special cleanliness drives and awareness in schools, markets and RWAs; sustaining ODF status</div></div></li><li><time>Day 5<br><small>Mon, 23 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span>Toilet locator and complaint signage, felicitation of sanitation workers, campaign close and State Conclave</div></div></li></ul></div>
+          <div class="card"><ul class="tl"><li><time>Day 1<br><small>Thu, 19 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></span>Inauguration of new community, public and aspirational toilets; campaign launch on World Toilet Day</div></div></li><li><time>Day 2<br><small>Fri, 20 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Public audit of CTs/PTs on the FACES parameters, led by women SHGs and community groups</div></div></li><li><time>Day 3<br><small>Sat, 21 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span>Repair, refurbishment and upgrading; water, light, handwashing, menstrual hygiene and accessibility</div></div></li><li><time>Day 4<br><small>Sun, 22 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3l-7 7"/><path d="M10 9l5 5-3 7-9-9z"/></svg></span>Special cleanliness drives and awareness in schools, markets and RWAs; sustaining ODF status</div></div></li><li><time>Day 5<br><small>Mon, 23 Nov</small></time><div><div class="t"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span>Toilet locator and complaint signage, felicitation of sanitation workers and campaign close <small style="color:var(--muted)">(State Conclave postponed – new date to be announced)</small></div></div></li></ul></div>
           <p style="color:var(--muted);font-size:14px;margin-top:8px">ULBs may change the order to suit local needs, but all activities are to be held during the campaign.</p>
       </div>
     </div>
@@ -326,7 +332,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">Programme</div>
       <h2>Agenda</h2>
-      <p class="lead">Monday, 23 November 2026 · <span class="venue">Lucknow</span> · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Map</a></p>
+      <p class="lead"><b>Postponed – new date to be announced</b> (originally 23 November 2026) · <span class="venue">Lucknow</span> · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Map</a></p>
       <div class="note">Timings may be adjusted to the schedule of the Hon'ble Minister.</div>
       <div class="card">
         <ul class="tl">
@@ -427,7 +433,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
           </tbody>
         </table>
       </div>
-      <p class="src">*Indicative tariff per night for 22–23 November 2026, as seen online; actual rates vary — please confirm with the hotel. Ratings are Google reviews. Invited guests whose stay is arranged by the organisers need not book.</p>
+      <p class="src">*Indicative tariff per night as seen online for the original dates (22–23 November 2026); actual rates vary — please confirm with the hotel. Ratings are Google reviews. Invited guests whose stay is arranged by the organisers need not book.</p>
 
       <h3 style="font-size:22px;margin:34px 0 10px">Places to visit</h3>
       <div class="xgrid">
@@ -471,8 +477,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       <div class="card" style="max-width:780px;margin:0 auto">
         <div style="display:flex;gap:14px;align-items:center;margin-bottom:6px"><div class="ico" style="background:var(--soft);margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h6v7H7z"/><path d="M4 10h16a8 8 0 0 1-8 7v4H9v-4a8 8 0 0 1-5-7z"/></svg></div><div class="eyebrow" style="margin:0">Registration</div></div>
         <h2>Register for the Conclave</h2>
-        <p class="lead" style="margin-bottom:10px">23 November 2026 · <span class="venue">Lucknow</span> (<a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">map</a>) · Fields marked * are required.</p>
-        <div class="note" style="margin-bottom:18px">Participation is <b>by invitation only</b>. Please register <b>by 21 November 2026</b>, only if you have received an invitation; your registration ID will be needed at the registration desk.<br>For assistance: <b>Dr. Abhay Kumar Verma</b>, <a href="tel:+919456100181">9456100181</a> · <b>Mrs. Arti Tiwari</b>, <a href="tel:+918299785684">+91 82997 85684</a></div>
+        <p class="lead" style="margin-bottom:10px"><b>Postponed – new date to be announced</b> · <span class="venue">Lucknow</span> (<a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">map</a>) · Fields marked * are required.</p>
+        <div class="note" style="margin-bottom:18px">The Conclave has been <b>postponed</b>; the new date will be announced on this website. Participation is <b>by invitation only</b> — please register only if you have received an invitation; your registration ID will be needed at the registration desk.<br>For assistance: <b>Dr. Abhay Kumar Verma</b>, <a href="tel:+919456100181">9456100181</a> · <b>Mrs. Arti Tiwari</b>, <a href="tel:+918299785684">+91 82997 85684</a></div>
         <div class="setup" id="setupNotice" hidden>⚙️ This form is not yet connected to the Google Sheet. Add the Web App URL as described in SETUP.txt.</div>
         <form id="regForm" novalidate>
           <div class="row">
@@ -536,7 +542,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
   </section>
 </div>
 
-<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · UP Sanitation Conclave 2026 · 23 November 2026 · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Hotel Mercure, Gomti Nagar Extension, Lucknow</a></div></footer>
+<footer><div class="wrap">Swachh Bharat Mission-Urban · Directorate of Urban Local Bodies, Uttar Pradesh · UP Sanitation Conclave 2026 (postponed – new date to be announced) · <a href="https://maps.app.goo.gl/Xdma8RFoB43ByRzc9" target="_blank" rel="noopener">Hotel Mercure, Gomti Nagar Extension, Lucknow</a></div></footer>
 
 <script>
 /* ---------- partners (put logo files in logos/) ---------- */
@@ -581,7 +587,9 @@ document.getElementById('updList').innerHTML=UPDATES.map(u=>`<li><time>${esc(u.d
 document.getElementById('bpList').innerHTML=BEST_PRACTICES.length?BEST_PRACTICES.map(b=>`<div class="card" style="margin-bottom:14px"><b>${esc(b.title)}</b><div style="color:var(--muted);font-size:14px;margin:2px 0 8px">${esc(b.ulb)}, ${esc(b.district)}</div><div>${esc(b.text)}</div></div>`).join(''):'<div class="card" style="color:var(--muted)">Best practices will be declared here after the campaign (19–23 November 2026). Urban local bodies are requested to keep reporting their activities daily.</div>';
 /* ---------- countdown ---------- */
 const target=new Date(EVENT_START);
-function tick(){const ms=target-new Date(),el=document.getElementById('countdown');
+function tick(){const el=document.getElementById('countdown');
+  if(!EVENT_START){el.innerHTML='<b>Conclave postponed</b> · new date to be announced';return}
+  const ms=target-new Date();
   if(ms<=0){el.textContent='';return}
   const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
   el.innerHTML='Conclave starts in <b>'+d+'</b> days <b>'+h+'</b> hrs <b>'+m+'</b> min';}
